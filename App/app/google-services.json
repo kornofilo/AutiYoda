@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "208245198572",
+    "firebase_url": "https://autiyoda.firebaseio.com",
+    "project_id": "autiyoda",
+    "storage_bucket": "autiyoda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208245198572:android:008f547d9141abd3",
+        "android_client_info": {
+          "package_name": "com.rialvik.autiyoda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208245198572-naiekv5frhs0rdmf0tpj6dfn3dvfc8bg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rialvik.autiyoda",
+            "certificate_hash": "ffdd011ea12ca24a6678d03157621aae5b4c0599"
+          }
+        },
+        {
+          "client_id": "208245198572-8gcc817kfq71gcjl5cfags74bprs4029.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCshiQJKDZc1ay7CdljTSf499xaAyLmRUs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208245198572-8gcc817kfq71gcjl5cfags74bprs4029.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
