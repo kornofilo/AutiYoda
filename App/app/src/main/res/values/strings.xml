@@ -17,33 +17,42 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_settings">Settings</string>
 
-    <!-- Strings related to Settings -->
+    <!-- Strings de opciones -->
 
-    <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
+        <!-- Modo Noche -->
+        <string name="pref_title_night_mode">Night Mode</string>
+        <string name="pref_description_Night_mode">Enable or Disable Night Mode.</string>
 
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
-    </string>
+        <!-- Example General settings -->
+        <string name="pref_header_general">General</string>
 
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
+        <!-- Seleccionar País -->
+        <string name="countries">Select Country</string>
+        <string-array name="countries_list_titles">
+            <item>Panama</item>
+        </string-array>
+        <string-array name="countries_list_values">
+            <item>Panama</item>
+        </string-array>
 
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
+        <!-- Género -->
+        <string name="gender">Gender</string>
+        <string-array name="gender_list_titles">
+            <item>Boy</item>
+            <item>Girl</item>
+        </string-array>
+        <string-array name="gender_list_values">
+            <item>1</item>
+            <item>0</item>
+        </string-array>
+
+        <!-- Cerrar Sesión -->
+        <string name="logout">Logout</string>
+
 
     <!-- Example settings for Data & Sync -->
     <string name="pref_header_data_sync">Data &amp; sync</string>
+
 
     <string name="pref_title_sync_frequency">Sync frequency</string>
     <string-array name="pref_sync_frequency_titles">
@@ -92,4 +101,5 @@
     <string name="title_home">Home</string>
     <string name="title_pictograms">Pictograms</string>
     <string name="title_vocabulary">Vocabulary</string>
+    <string name="signUp">Sign Up</string>
 </resources>

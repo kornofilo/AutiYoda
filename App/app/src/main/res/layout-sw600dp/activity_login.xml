@@ -71,10 +71,13 @@
                 android:text="@string/action_sign_in"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/buttonSignUp"
+            <TextView
+                android:id="@+id/textViewSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 tools:text="@string/signUp" />
 
         </LinearLayout>
