@@ -15,23 +15,14 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_maps">Map</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_maps">Lugares de Interes</string>
+    <string name="title_activity_settings">Opciones</string>
 
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
 
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
-    </string>
-
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
-
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
     <string-array name="pref_example_list_titles">
         <item>Always</item>
         <item>When possible</item>
@@ -85,12 +76,17 @@
 
     <string name="pref_title_new_message_notifications">New message notifications</string>
 
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_ringtone_silent">Silent</string>
-
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_pictograms">Pictogramas</string>
     <string name="title_vocabulary">Vocabulario</string>
+    <string name="letslearn">Aprendamos</string>
+    <string name="action_settings">Opciones</string>
+    <string name="signUp">Registrarse</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="gender">Género</string>
+    <string name="countries">Seleccionar País</string>
+    <string name="pref_title_night_mode">Modo Noche</string>
+    <string name="pref_description_Night_mode">Actiiva o Desactiva el Modo Noche</string>
 </resources>
