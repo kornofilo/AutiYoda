@@ -2,6 +2,7 @@
 
     <!-- Opción de Modo Noche. -->
     <SwitchPreference
+        android:icon="@drawable/ic_theme_black_24dp"
         android:defaultValue="false"
         android:key="nightMode_switch"
         android:summary="@string/pref_description_Night_mode"
@@ -9,6 +10,7 @@
 
     <!-- Opción de Seleccionar País -->
     <ListPreference
+        android:icon="@drawable/ic_place_black_24dp"
         android:defaultValue="-1"
         android:entries="@array/countries_list_titles"
         android:entryValues="@array/countries_list_values"
@@ -19,6 +21,7 @@
 
     <!-- Opción de Seleccionar Género -->
     <ListPreference
+        android:icon="@drawable/ic_happy_black_24dp"
         android:defaultValue="-1"
         android:entries="@array/gender_list_titles"
         android:entryValues="@array/gender_list_values"
@@ -27,12 +30,13 @@
         android:positiveButtonText="@null"
         android:title="@string/gender" />
 
+
     <!-- Cerrar Sesión -->
-    <Preference android:title="@string/logout" >
+    <Preference android:title="@string/logout">
         <intent android:action="android.intent.action.VIEW"
             android:data="" />
     </Preference>
 
-
-
 </PreferenceScreen>
+
+
