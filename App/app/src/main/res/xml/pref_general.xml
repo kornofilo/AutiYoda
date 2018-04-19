@@ -1,42 +1,59 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Opción de Modo Noche. -->
-    <SwitchPreference
-        android:icon="@drawable/ic_theme_black_24dp"
-        android:defaultValue="false"
-        android:key="nightMode_switch"
-        android:summary="@string/pref_description_Night_mode"
-        android:title="@string/pref_title_night_mode" />
 
-    <!-- Opción de Seleccionar País -->
-    <ListPreference
-        android:icon="@drawable/ic_place_black_24dp"
-        android:defaultValue="-1"
-        android:entries="@array/countries_list_titles"
-        android:entryValues="@array/countries_list_values"
-        android:key="gender"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/countries" />
+
+    <PreferenceCategory android:title="@string/profile">
+        <!-- Opción de Modo Noche. -->
+        <SwitchPreference
+            android:icon="@drawable/ic_theme_black_24dp"
+            android:defaultValue="false"
+            android:key="nightMode_switch"
+            android:summary="@string/pref_description_Night_mode"
+            android:title="@string/pref_title_night_mode" />
+        <!-- Opción de Seleccionar País -->
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/countries_list_titles"
+            android:entryValues="@array/countries_list_values"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:key="gender"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/countries" />
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/gender_list_titles"
+            android:entryValues="@array/gender_list_values"
+            android:icon="@drawable/ic_happy_black_24dp"
+            android:key="gender"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/gender" />
+    </PreferenceCategory>
 
     <!-- Opción de Seleccionar Género -->
-    <ListPreference
-        android:icon="@drawable/ic_happy_black_24dp"
-        android:defaultValue="-1"
-        android:entries="@array/gender_list_titles"
-        android:entryValues="@array/gender_list_values"
-        android:key="gender"
-        android:negativeButtonText="@null"
-        android:positiveButtonText="@null"
-        android:title="@string/gender" />
 
 
     <!-- Cerrar Sesión -->
-    <Preference android:title="@string/logout">
-        <intent android:action="android.intent.action.VIEW"
-            android:data="" />
-    </Preference>
+    <PreferenceCategory android:title="@string/account">
+
+        <Preference
+            android:title="@string/logout">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="" />
+        </Preference>
+
+        <Preference android:title="@string/deleteAccount">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="" />
+        </Preference>
+
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
-
 
