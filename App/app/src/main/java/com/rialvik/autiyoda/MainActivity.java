@@ -16,16 +16,13 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private SharedPreferences pref;
-    private boolean tema;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //Verificamos el tema seleccionado por el usuario
-        pref = PreferenceManager.getDefaultSharedPreferences(this);
-        tema = pref.getBoolean("nightMode_switch", false);
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean tema = pref.getBoolean("nightMode_switch", false);
         //Dependiendo del valor recuperado, se establece el tema para la activity.
         if(tema) {
             setTheme(R.style.DarkTheme);

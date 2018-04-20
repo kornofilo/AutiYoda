@@ -5,7 +5,7 @@
     <color name="colorAccent">#1C313A</color>
 
     <!-- DarkTheme-->
-    <color name="backgroundDark">#1c313a</color>
-    <color name="AccentDark">#66bb6a</color>
-    <color name="primaryDark">#455a64</color>
+    <color name="backgroundDark">#1C313A</color>
+    <color name="AccentDark">#66BB6A</color>
+    <color name="primaryDark">#455A64</color>
 </resources>
