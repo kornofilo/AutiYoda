@@ -38,14 +38,16 @@
     <PreferenceCategory android:title="@string/account">
 
         <Preference
-            android:title="@string/logout">
+            android:title="@string/logout"
+            android:key="logout_pref"
+            android:icon="@drawable/ic_logout_black_24dp">
 
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="" />
+            <intent android:action="android.intent.action.VIEW"
+                android:targetPackage="mai" />
         </Preference>
 
-        <Preference android:title="@string/deleteAccount">
+        <Preference android:title="@string/deleteAccount"
+            android:icon="@drawable/ic_delete_account_black_24dp">
 
             <intent
                 android:action="android.intent.action.VIEW"

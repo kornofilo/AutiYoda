@@ -29,10 +29,7 @@ public class MainActivity extends AppCompatActivity
             setTheme(R.style.DarkTheme);
         }
 
-
         setContentView(R.layout.activity_main);
-
-
 
        /* //Fragment de Bienvenida
         // Verificamos si el usuario ingresa a la aplicación por primera vez.
@@ -74,13 +71,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Intent intentMain;
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_pictograms) {
-            // Handle the camera action
         } else if (id == R.id.nav_vocabulary) {
-
 
         } else if (id == R.id.nav_maps) {
             intentMain = new Intent(MainActivity.this,MapsActivity.class);

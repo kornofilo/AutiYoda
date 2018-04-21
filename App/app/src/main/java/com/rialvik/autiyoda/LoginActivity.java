@@ -124,11 +124,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
-        if (mAuthTask != null) {
-
-
-        }
-
         // Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
@@ -319,9 +314,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             mPasswordView.requestFocus();
                         }else if (task.isSuccessful()){
                             Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                            startActivity(intent);
                             finish();
-
+                            startActivity(intent);
                         }
 
                     }
