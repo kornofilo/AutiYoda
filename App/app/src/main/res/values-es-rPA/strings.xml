@@ -87,4 +87,6 @@
     <string name="countries">Seleccionar País</string>
     <string name="pref_title_night_mode">Modo Noche</string>
     <string name="pref_description_Night_mode">Actiiva o Desactiva el Modo Noche</string>
+    <string name="signUpQ">Don\'t have an account? Sign Up</string>
+    <string name="forgotPassword">Did you forgot your password?</string>
 </resources>

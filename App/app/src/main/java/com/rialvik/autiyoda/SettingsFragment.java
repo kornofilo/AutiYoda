@@ -16,8 +16,20 @@ public class SettingsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.pref_general);
 
         //setOnClickListener para las opciones de Logout y Eliminar cuenta.
-        Preference pref = findPreference("logout_pref");
-        pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        Preference prefLogout, prefDeleteAccount;
+        prefLogout = findPreference("logout_pref");
+        prefDeleteAccount = findPreference("delete_account_pref");
+        prefLogout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            public boolean onPreferenceClick(Preference pref) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intentLogout = new Intent(getActivity(), LoginActivity.class);
+                intentLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentLogout);
+                return true;
+            }
+        });
+
+        prefDeleteAccount.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference pref) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intentLogout = new Intent(getActivity(), LoginActivity.class);

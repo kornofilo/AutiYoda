@@ -70,10 +70,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
                 android:text="@string/action_sign_in"
+                android:onClick="onClick"
                 android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewResetPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:onClick="onClick"
+                android:text="@string/forgotPassword"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSignUpOpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/signUpQ"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:onClick="onClick"
                 android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>
+
 </RelativeLayout>
