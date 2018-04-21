@@ -69,8 +69,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         // Set up the login form.
         mEmailView = findViewById(R.id.email);
-
-
         mPasswordView = findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -82,8 +80,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 return false;
             }
         });
-
-        Button mEmailSignInButton = findViewById(R.id.email_sign_in_button);
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
@@ -157,7 +153,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() > 5;
     }
 
     /**
@@ -312,13 +308,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             case R.id.email_sign_in_button: {
                 attemptLogin();
                 break;
-            }
-            case R.id.textViewResetPassword: {
+            }case R.id.textViewResetPassword: {
                 Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 break;
-            }
-            case R.id.textViewSignUp: {
+            }case R.id.textViewSignUp: {
                 Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
                 startActivity(intent);
                 break;

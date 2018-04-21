@@ -297,6 +297,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
     }
 
     public void signUpSuccesMSG(){
+        //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
         builder.setMessage(R.string.dialog_su_message)
                 .setTitle(R.string.success);
@@ -309,7 +310,6 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
         });
         AlertDialog dialogSuccesMSG = builder.create();
         dialogSuccesMSG.show();
-
     }
 
 }
