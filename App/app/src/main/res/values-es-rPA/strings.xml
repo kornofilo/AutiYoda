@@ -81,7 +81,7 @@
     <string name="title_vocabulary">Vocabulario</string>
     <string name="letslearn">Aprendamos</string>
     <string name="action_settings">Opciones</string>
-    <string name="signUp">Registrarse</string>
+    <string name="signUp">Crear Cuenta</string>
     <string name="logout">Cerrar Sesión</string>
     <string name="gender">Género</string>
     <string name="countries">Seleccionar País</string>
@@ -89,4 +89,12 @@
     <string name="pref_description_Night_mode">Actiiva o Desactiva el Modo Noche</string>
     <string name="signUpQ">Don\'t have an account? Sign Up</string>
     <string name="forgotPassword">Did you forgot your password?</string>
+    <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
+    <string name="deleteAccount">Eliminar Cuenta</string>
+    <string name="prompt_password_confirmation">Confirmación de Contraseña</string>
+    <string name="dialog_su_message">El usuario ha sido creado exitosamente</string>
+    <string name="ok">OK</string>
+    <string name="sign_up_form_title">Registrarse</string>
+    <string name="prompt_age">Edad (en años)</string>
+    <string name="prompt_name">Nombre</string>
 </resources>
