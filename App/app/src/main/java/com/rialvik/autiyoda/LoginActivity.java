@@ -309,8 +309,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             case R.id.email_sign_in_button: {
                 attemptLogin();
                 break;
-            }
-            case R.id.textViewSignUpOpt: {
+            } case R.id.textViewResetPassword: {
+                intent = new Intent(LoginActivity.this, PasswordResetActivity.class);
+                startActivity(intent);
+                break;
+            } case R.id.textViewSignUpOpt: {
                 intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 break;

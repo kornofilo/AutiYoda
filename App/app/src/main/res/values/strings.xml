@@ -126,4 +126,7 @@
     <string name="Welcome">Welcome</string>
     <string name="sign_up_form_title">Create Account</string>
     <string name="login">Login</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="password_reset_indications">Enter your account e-mail. We will send you an e-mail with the indications to reset your password.</string>
+    <string name="send">Send</string>
 </resources>
