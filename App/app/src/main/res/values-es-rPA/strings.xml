@@ -87,7 +87,7 @@
     <string name="countries">Seleccionar País</string>
     <string name="pref_title_night_mode">Modo Noche</string>
     <string name="pref_description_Night_mode">Actiiva o Desactiva el Modo Noche</string>
-    <string name="signUpQ">Don\'t have an account? Sign Up</string>
+    <string name="signUpQ">Crear Cuenta</string>
     <string name="forgotPassword">Did you forgot your password?</string>
     <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
     <string name="deleteAccount">Eliminar Cuenta</string>

@@ -304,16 +304,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
             case R.id.email_sign_in_button: {
                 attemptLogin();
                 break;
-            }case R.id.textViewResetPassword: {
-                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
-                startActivity(intent);
-                break;
-            }case R.id.textViewSignUp: {
-                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+            }
+            case R.id.textViewSignUpOpt: {
+                intent = new Intent(LoginActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 break;
             }
