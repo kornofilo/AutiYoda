@@ -129,4 +129,6 @@
     <string name="password_reset">Password Reset</string>
     <string name="password_reset_indications">Enter your account e-mail. We will send you an e-mail with the indications to reset your password.</string>
     <string name="send">Send</string>
+    <string name="title_inbox">Inbox</string>
+    <string name="title_help">Help</string>
 </resources>

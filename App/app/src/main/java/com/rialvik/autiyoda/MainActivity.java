@@ -82,14 +82,18 @@ public class MainActivity extends AppCompatActivity
         Intent intentMain;
         int id = item.getItemId();
 
-        if (id == R.id.nav_pictograms) {
+        if (id == R.id.nav_inbox) {
         } else if (id == R.id.nav_vocabulary) {
 
         } else if (id == R.id.nav_maps) {
             intentMain = new Intent(MainActivity.this,MapsActivity.class);
             startActivity(intentMain);
 
-        }  else if (id == R.id.nav_settings) {
+        } else if (id == R.id.nav_help) {
+
+
+        }
+        else if (id == R.id.nav_settings) {
             intentMain = new Intent(MainActivity.this,SettingsActivity.class);
             startActivity(intentMain);
         }
