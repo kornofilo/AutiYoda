@@ -10,9 +10,6 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">Este campo es obligatorio</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="title_activity_maps">Lugares de Interes</string>
     <string name="title_activity_settings">Opciones</string>
 
@@ -32,8 +29,6 @@
         <item>-1</item>
     </string-array>
 
-    <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
 
     <string name="pref_title_sync_frequency">Sync frequency</string>
     <string-array name="pref_sync_frequency_titles">
@@ -86,7 +81,7 @@
     <string name="gender">Género</string>
     <string name="countries">Seleccionar País</string>
     <string name="pref_title_night_mode">Modo Noche</string>
-    <string name="pref_description_Night_mode">Actiiva o Desactiva el Modo Noche</string>
+    <string name="pref_description_Night_mode">Activa o Desactiva el Modo Noche</string>
     <string name="signUpQ">Crear Cuenta</string>
     <string name="forgotPassword">Did you forgot your password?</string>
     <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
@@ -98,4 +93,12 @@
     <string name="prompt_age">Edad (en años)</string>
     <string name="prompt_name">Nombre</string>
     <string name="error">Error en la Operación</string>
+    <string name="title_help">Ayuda</string>
+    <string name="title_language">Idioma</string>
+    <string name="send">Enviar</string>
+    <string name="password_reset">Recuperación de Contraseña</string>
+    <string name="login">Inicio de Sesión</string>
+    <string name="password_reset_succesful">Hemos enviado a su dirección de correo electrónico las indicaciones para la recuperación de su contraseña.</string>
+    <string name="password_reset_indications">Ingrese su dirección de correo electrónico asociado a su cuenta. Le enviaremos un crreo con las indicaciones para recuperar su contraseña.</string>
+    <string name="Welcome">Bienvenido</string>
 </resources>
