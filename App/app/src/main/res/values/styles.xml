@@ -20,6 +20,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!-- Dark Theme -->
     <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -33,6 +34,8 @@
         <item name="android:textViewStyle">@color/common_google_signin_btn_text_dark</item>
         <item name="android:textColorHint">@color/common_google_signin_btn_text_dark</item>
         <item name="alertDialogTheme">@style/DarkTheme</item>
+        <item name="android:background">@color/backgroundDark</item>
     </style>
+
 
 </resources>

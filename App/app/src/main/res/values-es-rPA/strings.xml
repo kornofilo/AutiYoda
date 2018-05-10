@@ -97,4 +97,5 @@
     <string name="sign_up_form_title">Registrarse</string>
     <string name="prompt_age">Edad (en años)</string>
     <string name="prompt_name">Nombre</string>
+    <string name="error">Error en la Operación</string>
 </resources>

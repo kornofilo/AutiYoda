@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView textViewUsername;
-    String username;
+    String userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Inicialización del Drawer principal.
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -58,8 +59,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         textViewUsername = navigationView.getHeaderView(0).findViewById(R.id.textViewUsername);
-        username = getCurrentUser();
-        textViewUsername.setText(username);
+
+        //Obtenemos el correo del usuario registrado al llamar al la función "getCurrentUserEmail).
+        userEmail = getCurrentUserEmail();
+        textViewUsername.setText(userEmail);
     }
 
 
@@ -78,24 +81,25 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
+    //Función que gestionas las acciones de cada uno de los elementos del drawer principal.
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Intent intentMain;
+        Intent intent;
         int id = item.getItemId();
 
         if (id == R.id.nav_inbox) {
         } else if (id == R.id.nav_vocabulary) {
 
         } else if (id == R.id.nav_maps) {
-            intentMain = new Intent(MainActivity.this,MapsActivity.class);
-            startActivity(intentMain);
+            intent = new Intent(MainActivity.this,MapsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_help) {
 
 
         }
         else if (id == R.id.nav_settings) {
-            intentMain = new Intent(MainActivity.this,SettingsActivity.class);
-            startActivity(intentMain);
+            intent = new Intent(MainActivity.this,SettingsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -103,8 +107,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public String getCurrentUser(){
+    //Función que obtiene el correo del usuario que se ha registrado en la aplicación y lo devuelve como String.
+    public String getCurrentUserEmail(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
         return user.getEmail();
     }
 }

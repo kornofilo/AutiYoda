@@ -29,6 +29,7 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
+
         prefDeleteAccount.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference pref) {
                 FirebaseAuth.getInstance().signOut();

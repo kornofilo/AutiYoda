@@ -131,4 +131,7 @@
     <string name="send">Send</string>
     <string name="title_inbox">Inbox</string>
     <string name="title_help">Help</string>
+    <string name="title_language">Language</string>
+    <string name="password_reset_succesful">We sent to your email adress the indications for reset your password.</string>
+    <string name="error">Error</string>
 </resources>
