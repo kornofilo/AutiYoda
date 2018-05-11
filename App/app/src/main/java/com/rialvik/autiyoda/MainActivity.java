@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,8 +40,6 @@ public class MainActivity extends AppCompatActivity
         }
 
         setContentView(R.layout.activity_main);
-
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -78,23 +78,19 @@ public class MainActivity extends AppCompatActivity
     @Override
     //Función que gestionas las acciones de cada uno de los elementos del drawer principal.
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Intent intent;
         int id = item.getItemId();
 
         if (id == R.id.nav_inbox) {
         } else if (id == R.id.nav_vocabulary) {
 
         } else if (id == R.id.nav_maps) {
-            intent = new Intent(MainActivity.this,MapsActivity.class);
-            startActivity(intent);
-
+            startActivity(new Intent(this, MapsActivity.class));
         } else if (id == R.id.nav_help) {
 
 
         }
         else if (id == R.id.nav_settings) {
-            intent = new Intent(MainActivity.this,SettingsActivity.class);
-            startActivity(intent);
+            startActivity(new Intent(this, SettingsActivity.class));
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

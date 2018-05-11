@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start|center"
-                android:text="Skip"
+                android:text="@string/skip"
                 android:textColor="@android:color/white" />
 
             <LinearLayout
@@ -65,12 +65,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center"
-                android:text="Finish"
+                android:text="@string/finish"
                 android:textColor="@android:color/white"
                 android:visibility="gone" />
 
             <ImageButton
-                android:id="@+id/intro_btn_next"
+                android:id="@+id/Button_Next"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

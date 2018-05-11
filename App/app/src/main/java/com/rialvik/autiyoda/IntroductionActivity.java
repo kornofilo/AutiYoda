@@ -96,16 +96,13 @@ public class IntroductionActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_introduction, container, false);
             TextView titleTextView = rootView.findViewById(R.id.TextViewIntroductionTitle);
-
-
             Button skipButton = rootView.findViewById(R.id.ButtonSkip);
+
             switch (getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     titleTextView.setText(R.string.Welcome);
                 break;
-
-
 
                 case 2:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
@@ -135,6 +132,8 @@ public class IntroductionActivity extends AppCompatActivity {
 
             return rootView;
         }
+
+
 
 
     }

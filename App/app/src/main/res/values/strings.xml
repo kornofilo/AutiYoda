@@ -127,5 +127,6 @@
     <string name="password_reset_succesful">We sent to your email address the indications for reset your password.</string>
     <string name="error">Error</string>
     <string name="title_activity_introduction">IntroductionActivity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="skip">Skip</string>
+    <string name="finish">Finish</string>
 </resources>

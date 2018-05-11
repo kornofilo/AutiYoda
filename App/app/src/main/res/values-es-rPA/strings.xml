@@ -101,4 +101,6 @@
     <string name="password_reset_succesful">Hemos enviado a su dirección de correo electrónico las indicaciones para la recuperación de su contraseña.</string>
     <string name="password_reset_indications">Ingrese su dirección de correo electrónico asociado a su cuenta. Le enviaremos un crreo con las indicaciones para recuperar su contraseña.</string>
     <string name="Welcome">Bienvenido</string>
+    <string name="skip">Omitir</string>
+    <string name="finish">Finalizar</string>
 </resources>
