@@ -21,7 +21,7 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Dark Theme -->
-    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
+    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:colorBackground">@color/backgroundDark</item>
@@ -36,6 +36,10 @@
         <item name="alertDialogTheme">@style/DarkTheme</item>
         <item name="android:background">@color/backgroundDark</item>
     </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

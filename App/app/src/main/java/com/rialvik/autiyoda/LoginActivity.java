@@ -56,6 +56,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         //Verificamos el tema seleccionado por el usuario
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean firstTime = pref.getBoolean("first_time", true);
+        //Fragment de Bienvenida
+        // Verificamos si el usuario ingresa a la aplicación por primera vez.
+        if (firstTime) {
+            //Ejecutamos el fragment de bienvenida.
+            startActivity(new Intent(this, IntroductionActivity.class));
+            finish();
+        }
+
         boolean tema = pref.getBoolean("nightMode_switch", false);
         //Dependiendo del valor recuperado, se establece el tema para la activity.
         if(tema) {
@@ -94,6 +104,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // Si el usuario está logueado, lo trasladamos a la activity princial.
             Intent itentMain = new Intent(this,MainActivity.class);
             startActivity(itentMain);
+            finish();
         }
     }
 

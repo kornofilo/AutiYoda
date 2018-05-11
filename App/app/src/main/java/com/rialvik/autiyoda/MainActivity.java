@@ -26,8 +26,11 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         //Verificamos el tema seleccionado por el usuario
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+
+
         boolean tema = pref.getBoolean("nightMode_switch", false);
         //Dependiendo del valor recuperado, se establece el tema para la activity.
         if(tema) {
@@ -36,14 +39,6 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_main);
 
-
-       /* //Fragment de Bienvenida
-        // Verificamos si el usuario ingresa a la aplicación por primera vez.
-        if (!sharedPreferences.getBoolean(
-            MyOnboardingFragment.COMPLETED_ONBOARDING_PREF_NAME, false)) {
-            //Ejecutamos el fragment de bienvenida.
-            startActivity(new Intent(this, WelcomeFragment.class));
-        }*/
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);

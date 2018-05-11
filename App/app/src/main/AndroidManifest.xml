@@ -52,7 +52,11 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".PasswordResetActivity"/>
+        <activity android:name=".PasswordResetActivity" />
+        <activity
+            android:name=".IntroductionActivity"
+            android:label="@string/title_activity_introduction"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
