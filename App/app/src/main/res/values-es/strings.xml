@@ -83,7 +83,7 @@
     <string name="pref_title_night_mode">Modo Noche</string>
     <string name="pref_description_Night_mode">Activa o Desactiva el Modo Noche</string>
     <string name="signUpQ">Crear Cuenta</string>
-    <string name="forgotPassword">Did you forgot your password?</string>
+    <string name="forgotPassword">¿Ha olvidado su contraseña?</string>
     <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
     <string name="deleteAccount">Eliminar Cuenta</string>
     <string name="prompt_password_confirmation">Confirmación de Contraseña</string>

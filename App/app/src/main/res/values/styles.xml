@@ -31,8 +31,8 @@
         </item>
         <item name="android:textColorSecondary">@color/common_google_signin_btn_text_dark_default
         </item>
-        <item name="android:textViewStyle">@color/common_google_signin_btn_text_dark</item>
-        <item name="android:textColorHint">@color/common_google_signin_btn_text_dark</item>
+        <item name="android:textViewStyle">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
         <item name="alertDialogTheme">@style/DarkTheme</item>
         <item name="android:background">@color/backgroundDark</item>
     </style>

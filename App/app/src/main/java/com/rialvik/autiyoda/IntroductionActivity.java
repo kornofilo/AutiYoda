@@ -3,11 +3,7 @@ package com.rialvik.autiyoda;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -15,10 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -37,7 +31,7 @@ public class IntroductionActivity extends AppCompatActivity {
     /**
      * The {@link ViewPager} that will host the section contents.
      */
-    private ViewPager mViewPager;
+    private static ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +44,6 @@ public class IntroductionActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager =  findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
     }
 
 
@@ -96,46 +88,61 @@ public class IntroductionActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_introduction, container, false);
             TextView titleTextView = rootView.findViewById(R.id.TextViewIntroductionTitle);
-            Button skipButton = rootView.findViewById(R.id.ButtonSkip);
+            Button skipButton = rootView.findViewById(R.id.ButtonSkip), nextButton = rootView.findViewById(R.id.Button_Next);
+            int next = 0;
+
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     titleTextView.setText(R.string.Welcome);
+                    next = 1;
                 break;
 
                 case 2:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     titleTextView.setText(R.string.letslearn);
+                    next = 2;
                     break;
                 case 3:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-
+                    nextButton.setText(R.string.finish);
+                    next = 3;
                 break;
             }//Fin Switch-Case.
 
             skipButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putBoolean("first_time", false);
-                    editor.apply();
-
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                    getActivity().finish();
+                  finishIntroduction();
                 }
             });
 
+            final int finalNext = next;
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mViewPager.setCurrentItem(finalNext, true);
+
+                    if(finalNext == 3){
+                        finishIntroduction();
+                    }
+                }
+            });
 
 
             return rootView;
         }
 
+        private void finishIntroduction(){
+             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putBoolean("first_time", false);
+                    editor.apply();
 
-
-
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+            getActivity().finish();
+        }
     }
 
     /**
