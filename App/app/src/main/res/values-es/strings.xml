@@ -5,12 +5,12 @@
     <string name="prompt_email">Correo Electrónico</string>
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar Sesión</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_in_short">Iniciar Sesión</string>
     <string name="error_invalid_email">El formato del Correo ingresado es inválido</string>
-    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_invalid_password">La contraseña ingresada es muy corta. Debe contener al menos 8 caracteres.</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">Este campo es obligatorio</string>
-    <string name="title_activity_maps">Lugares de Interes</string>
+    <string name="title_activity_maps">Lugares de Interés</string>
     <string name="title_activity_settings">Opciones</string>
 
     <!-- Strings related to Settings -->
@@ -88,7 +88,6 @@
     <string name="deleteAccount">Eliminar Cuenta</string>
     <string name="prompt_password_confirmation">Confirmación de Contraseña</string>
     <string name="dialog_su_message">El usuario ha sido creado exitosamente</string>
-    <string name="ok">OK</string>
     <string name="sign_up_form_title">Registrarse</string>
     <string name="prompt_age">Edad (en años)</string>
     <string name="prompt_name">Nombre</string>
@@ -103,4 +102,5 @@
     <string name="Welcome">Bienvenido</string>
     <string name="skip">Omitir</string>
     <string name="finish">Finalizar</string>
+    <string name="next">Siguiente</string>
 </resources>

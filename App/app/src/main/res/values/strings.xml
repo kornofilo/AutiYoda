@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AutiYoda</string>
+    <string name="app_name" translatable="false">AutiYoda</string>
 
 
     <!-- Strings del activity de login -->
@@ -110,7 +110,7 @@
     <string name="dialog_su_message">The User Has Been Created Successfully</string>
     <string name="dialog_su_title" />
     <string name="success">Success!</string>
-    <string name="ok">OK</string>
+    <string name="ok" translatable="false">OK</string>
     <string name="prompt_password_confirmation">Passsword Confirmation</string>
     <string name="sign_up_indications">Please, provide de following information in order to create an account.</string>
     <string name="prompt_name">Name</string>
