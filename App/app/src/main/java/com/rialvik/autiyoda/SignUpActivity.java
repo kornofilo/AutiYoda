@@ -151,7 +151,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 8;
+        return password.length() >= 8;
     }
 
     /**

@@ -80,8 +80,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_inbox) {
-        } else if (id == R.id.nav_vocabulary) {
+        if (id == R.id.nav_vocabulary) {
 
         } else if (id == R.id.nav_maps) {
             startActivity(new Intent(this, MapsActivity.class));
