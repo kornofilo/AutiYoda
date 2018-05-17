@@ -1,8 +1,8 @@
 package com.rialvik.autiyoda;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,6 +29,7 @@ public class PasswordResetActivity extends AppCompatActivity {
         //Dependiendo del valor recuperado, se establece el tema para la activity.
         if(tema) {
             setTheme(R.style.DarkTheme);
+
         }
 
         setContentView(R.layout.activity_password_reset);
@@ -71,7 +70,7 @@ public class PasswordResetActivity extends AppCompatActivity {
 
     public void alertDialogs(String title, String message){
         //Creación del Alert Dialog que mostrará al usuario si la operación de restablecimiento de contraseña falló o fue un éxito.
-        AlertDialog.Builder builder = new AlertDialog.Builder(PasswordResetActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(PasswordResetActivity.this, R.style.DarkTheme_Dialogs);
         builder.setMessage(message)
                 .setTitle(title);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {

@@ -87,7 +87,7 @@ public class IntroductionActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_introduction, container, false);
-            TextView titleTextView = rootView.findViewById(R.id.TextViewIntroductionTitle);
+            TextView titleTextView = rootView.findViewById(R.id.TextViewIntroductionTitle), descriptionTextView = rootView.findViewById(R.id.textView_Description);
             Button skipButton = rootView.findViewById(R.id.ButtonSkip), nextButton = rootView.findViewById(R.id.Button_Next);
             int next = 0;
 
@@ -96,6 +96,7 @@ public class IntroductionActivity extends AppCompatActivity {
                 case 1:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     titleTextView.setText(R.string.Welcome);
+                    descriptionTextView.setText(R.string.welcome_description);
                     next = 1;
                 break;
 

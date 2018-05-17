@@ -16,7 +16,20 @@ public class SettingsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.pref_general);
 
         //setOnClickListener para las opciones de Logout y Eliminar cuenta.
-        Preference prefLogout, prefDeleteAccount;
+        Preference prefLogout, prefDeleteAccount, prefNightMode;
+
+        prefNightMode = findPreference("nightMode_switch");
+
+        prefNightMode.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intentLogout = new Intent(getActivity(), MainActivity.class);
+                intentLogout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentLogout);
+                return true;
+            }
+        });
+
         prefLogout = findPreference("logout_pref");
         prefDeleteAccount = findPreference("delete_account_pref");
         prefLogout.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {

@@ -115,7 +115,7 @@
     <string name="sign_up_indications">Please, provide de following information in order to create an account.</string>
     <string name="prompt_name">Name</string>
     <string name="prompt_age">Age (in years)</string>
-    <string name="Welcome">Welcome</string>
+    <string name="Welcome">Welcome to AutiYoda</string>
     <string name="sign_up_form_title">Create Account</string>
     <string name="login">Login</string>
     <string name="password_reset">Password Reset</string>
@@ -130,4 +130,5 @@
     <string name="skip">Skip</string>
     <string name="finish">Finish</string>
     <string name="next">Next</string>
+    <string name="welcome_description">Autiyoda is a mobile application whose goal help in the improvement of the speaking hability and perform daily activities.</string>
 </resources>

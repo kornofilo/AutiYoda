@@ -27,19 +27,17 @@
         <item name="android:colorBackground">@color/backgroundDark</item>
         <item name="colorAccent">@color/AccentDark</item>
         <item name="colorPrimary">@color/primaryDark</item>
-        <item name="android:textColorPrimary">@color/common_google_signin_btn_text_dark_default
-        </item>
-        <item name="android:textColorSecondary">@color/common_google_signin_btn_text_dark_default
-        </item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
         <item name="android:textViewStyle">@android:color/white</item>
         <item name="android:textColorHint">@android:color/white</item>
-        <item name="alertDialogTheme">@style/DarkTheme</item>
-        <item name="android:background">@color/backgroundDark</item>
+        <item name="alertDialogTheme">@style/DarkTheme_Dialogs</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="DarkTheme_Dialogs" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/backgroundDark</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
 
-    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-
+    </style>
 </resources>
