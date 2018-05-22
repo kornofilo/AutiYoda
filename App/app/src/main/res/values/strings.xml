@@ -1,51 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name" translatable="false">AutiYoda</string>
 
 
-    <!-- Strings del activity de login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Correo Electrónico</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar Sesión</string>
+    <string name="action_sign_in_short">Iniciar Sesión</string>
+    <string name="error_invalid_email">El formato del Correo ingresado es inválido</string>
+    <string name="error_invalid_password">La contraseña ingresada es muy corta. Debe contener al menos 8 caracteres.</string>
     <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="title_activity_maps">Places of Interest</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="error_field_required">Este campo es obligatorio</string>
+    <string name="title_activity_maps">Lugares de Interés</string>
+    <string name="title_activity_settings">Opciones</string>
 
-    <!-- Strings de opciones -->
-
-    <!-- Modo Noche -->
-    <string name="pref_title_night_mode">Night Mode</string>
-    <string name="pref_description_Night_mode">Enable or Disable Night Mode.</string>
+    <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
     <string name="pref_header_general">General</string>
 
-    <!-- Seleccionar País -->
-    <string name="countries">Select Country</string>
-    <string-array name="countries_list_titles">
-        <item>Panama</item>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
     </string-array>
-    <string-array name="countries_list_values">
-        <item>Panama</item>
-    </string-array>
-
-    <!-- Sección -->
-    <string-array name="section_list_titles">
-        <item>Pictograms</item>
-        <item>Vocabulary</item>
-    </string-array>
-    <string-array name="section_list_values">
-        <item>0</item>
+    <string-array name="pref_example_list_values">
         <item>1</item>
+        <item>0</item>
+        <item>-1</item>
     </string-array>
 
-    <!-- Cerrar Sesión -->
-    <string name="logout">Logout</string>
 
-
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
     <string-array name="pref_sync_frequency_values">
         <item>15</item>
         <item>30</item>
@@ -76,58 +72,70 @@
 
     <string name="pref_title_new_message_notifications">New message notifications</string>
 
-
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_main">Home</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_pictograms">Pictograms</string>
-    <string name="title_vocabulary">Vocabulary</string>
-    <string name="signUp">Sign Up</string>
+    <string name="title_pictograms">Pictogramas</string>
+    <string name="title_vocabulary">Vocabulario</string>
+    <string name="letslearn">Aprendamos</string>
+    <string name="action_settings">Opciones</string>
+    <string name="signUp">Crear Cuenta</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="gender">Género</string>
+    <string name="countries">Seleccionar País</string>
+    <string name="pref_title_night_mode">Modo Noche</string>
+    <string name="pref_description_Night_mode">Activa o Desactiva el Modo Noche</string>
+    <string name="signUpQ">Crear Cuenta</string>
+    <string name="forgotPassword">¿Ha olvidado su contraseña?</string>
+    <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
+    <string name="deleteAccount">Eliminar Cuenta</string>
+    <string name="prompt_password_confirmation">Confirmación de Contraseña</string>
+    <string name="dialog_su_message">El usuario ha sido creado exitosamente</string>
+    <string name="sign_up_form_title">Registrarse</string>
+    <string name="prompt_age">Edad (en años)</string>
+    <string name="prompt_name">Nombre</string>
+    <string name="error">Error en la Operación</string>
+    <string name="title_help">Ayuda</string>
+    <string name="title_language">Idioma</string>
+    <string name="send">Enviar</string>
+    <string name="password_reset">Recuperación de Contraseña</string>
+    <string name="login">Inicio de Sesión</string>
+    <string name="password_reset_succesful">Hemos enviado a su dirección de correo electrónico las indicaciones para la recuperación de su contraseña.</string>
+    <string name="password_reset_indications">Ingrese su dirección de correo electrónico asociado a su cuenta. Le enviaremos las indicaciones para recuperar su contraseña.</string>
+    <string name="Welcome">Bienvenido a AutiYoda</string>
+    <string name="skip">Omitir</string>
+    <string name="finish">Finalizar</string>
+    <string name="next">Siguiente</string>
+    <string name="welcome_description">Autiyoda es una aplicación móvil cuyo objetivo es ayudar en la mejora de la habilidad verbal y la realización de actividades diarias.</string>
+    <string name="comunication_introduction_description">Aprende nuevas palabras y frases al tocar la imagen en pantalla y escuchar su pronunciación.</string>
+    <string name="comunication_introduction_title">Aprendizaje por Síntesis de Voz</string>
+    <string name="pictograms_introduction_description">Aprende nuevas actividades paso a paso.</string>
+    <string name="pictograms_introduction_title">Aprendizaje por Pictogramas</string>
+
+    <string name="title_activity_pictograms">PictogramsActivity</string>
+    <string name="imageView_Introduction_Description">Introducción</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <!-- Sección -->
+    <string-array name="section_list_titles">
+        <item>Pictograms</item>
+        <item>Vocabulary</item>
+    </string-array>
+    <string-array name="section_list_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="defaultSection">Default Section</string>
+    <string name="account">Account</string>
+    <string name="profile">Profile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-    <string name="letslearn">Let\'s Learn</string>
-    <string name="profile">Profile</string>
-    <string name="account">Account</string>
-    <string name="deleteAccount">Delete Account</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="signUpQ">Create Account</string>
-    <string name="forgotPassword">Did you forgot your password?</string>
-    <string name="dialog_su_message">The User Has Been Created Successfully</string>
-    <string name="dialog_su_title" />
     <string name="success">Success!</string>
     <string name="ok" translatable="false">OK</string>
-    <string name="prompt_password_confirmation">Passsword Confirmation</string>
-    <string name="sign_up_indications">Please, provide de following information in order to create an account.</string>
-    <string name="prompt_name">Name</string>
-    <string name="prompt_age">Age (in years)</string>
-    <string name="Welcome">Welcome to AutiYoda</string>
-    <string name="sign_up_form_title">Create Account</string>
-    <string name="login">Login</string>
-    <string name="password_reset">Password Reset</string>
-    <string name="password_reset_indications">Enter your account e-mail. We will send you an e-mail with the indications to reset your password.</string>
-    <string name="send">Send</string>
-    <string name="title_inbox">Inbox</string>
-    <string name="title_help">Help</string>
-    <string name="title_language">Language</string>
-    <string name="password_reset_succesful">We sent to your email address the indications for reset your password.</string>
-    <string name="error">Error</string>
-    <string name="title_activity_introduction">IntroductionActivity</string>
-    <string name="skip">Skip</string>
-    <string name="finish">Finish</string>
-    <string name="next">Next</string>
-    <string name="welcome_description">Autiyoda is a mobile application whose goal help in the improvement of the speaking hability and perform daily activities.</string>
-    <string name="pictograms_introduction_title">Learning by Pictograms</string>
-    <string name="pictograms_introduction_description">Learn new activities step by step.</string>
-    <string name="comunication_introduction_title">Learning by Speech Synthesis</string>
-    <string name="comunication_introduction_description">Learn new words and phrases by touching the image on the screen and listening to its pronunciation.</string>
-    <string name="imageView_Introduction_Description">Introduction</string>
-    <string name="title_activity_pictograms">PictogramsActivity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="defaultmode">Default Mode</string>
-    <string name="defaultSection">Default Section</string>
+
+
+
 </resources>

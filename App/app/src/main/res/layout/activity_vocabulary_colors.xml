@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="horizontal"
+    tools:context=".VocabularyColorsActivity">
+    <HorizontalScrollView
+        android:id="@+id/horizontalscrollview"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivcv"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:src="@drawable/v_verde"
+                android:paddingLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/ivcr"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:src="@drawable/v_rojo"
+                android:paddingLeft="15dp"/>
+            <ImageView
+                android:id="@+id/ivcn"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:src="@drawable/v_naranja"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/ivnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="104dp"
+        app:srcCompat="@drawable/c_colores" />
+ <!--    <com.getbase.floatingactionbutton.FloatingActionsMenu
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iivc"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:fab_labelStyle="@style/menu_labels_style">
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/boton_entrada_color"
+            app:fab_icon="@drawable/i_entrada"
+            app:fab_colorNormal="#190303"
+            app:fab_colorPressed="#120a0a"
+            app:fab_size="mini"
+            app:fab_title="Frutas"
+            android:onClick="b_fruta"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/multid"
+            app:fab_icon="@drawable/ic_menu_black_24dp"
+            app:fab_colorNormal="#190303"
+            app:fab_colorPressed="#120a0a"
+            app:fab_size="mini"
+            app:fab_title="Categoria"
+            android:onClick="b_categoria"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu> -->
+</RelativeLayout>

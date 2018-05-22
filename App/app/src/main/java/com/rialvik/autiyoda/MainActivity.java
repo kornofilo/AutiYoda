@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this, PictogramsMenuActivity.class));
 
         }else if (id == R.id.nav_vocabulary) {
-            startActivity(new Intent(this, MapsActivity.class));
+            startActivity(new Intent(this, VocabularyMenuActivity.class));
         }
         else if (id == R.id.nav_maps) {
             startActivity(new Intent(this, MapsActivity.class));
