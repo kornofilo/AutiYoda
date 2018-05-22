@@ -1,7 +1,6 @@
 package com.rialvik.autiyoda;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -14,7 +13,6 @@ import android.widget.EditText;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-
 import java.util.Objects;
 
 public class PasswordResetActivity extends AppCompatActivity {
@@ -55,15 +53,16 @@ public class PasswordResetActivity extends AppCompatActivity {
 
 
     private void passwordReset(String email){
-        FirebaseAuth auth = FirebaseAuth.getInstance();
+        final FirebaseAuth auth = FirebaseAuth.getInstance();
         auth.sendPasswordResetEmail(email)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful())
                             alertDialogs(getString(R.string.success),getString(R.string.password_reset_succesful));
-                        }else
+                        else {
                             alertDialogs(getString(R.string.error), Objects.requireNonNull(task.getException()).getMessage());
+                        }
                     }
                 });
     }

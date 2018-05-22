@@ -131,4 +131,8 @@
     <string name="finish">Finish</string>
     <string name="next">Next</string>
     <string name="welcome_description">Autiyoda is a mobile application whose goal help in the improvement of the speaking hability and perform daily activities.</string>
+    <string name="pictograms_introduction_title">Learning by Pictograms</string>
+    <string name="pictograms_introduction_description">Learn new activities step by step.</string>
+    <string name="comunication_introduction_title">Learning by Speech Synthesis</string>
+    <string name="comunication_introduction_description">Learn new words and phrases by touching the image on the screen and listening to its pronunciation.</string>
 </resources>

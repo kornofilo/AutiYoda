@@ -104,4 +104,8 @@
     <string name="finish">Finalizar</string>
     <string name="next">Siguiente</string>
     <string name="welcome_description">Autiyoda es una aplicación móvil cuyo objetivo es ayudar en la mejora de la habilidad verbal y la realización de actividades diarias.</string>
+    <string name="comunication_introduction_description">Aprende nuevas palabras y frases al tocar la imagen en pantalla y escuchar su pronunciación.</string>
+    <string name="comunication_introduction_title">Aprendizaje por Síntesis de Voz</string>
+    <string name="pictograms_introduction_description">Aprende nuevas actividades paso a paso.</string>
+    <string name="pictograms_introduction_title">Aprendizaje por Pictogramas</string>
 </resources>

@@ -47,13 +47,6 @@ public class IntroductionActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_introduction, menu);
-        return true;
-    }
-
 
 
     /**
@@ -102,11 +95,14 @@ public class IntroductionActivity extends AppCompatActivity {
 
                 case 2:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                    titleTextView.setText(R.string.letslearn);
+                    titleTextView.setText(R.string.pictograms_introduction_title);
+                    descriptionTextView.setText(R.string.pictograms_introduction_description);
                     next = 2;
                     break;
                 case 3:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                    titleTextView.setText(R.string.comunication_introduction_title);
+                    descriptionTextView.setText(R.string.comunication_introduction_description);
                     nextButton.setText(R.string.finish);
                     next = 3;
                 break;

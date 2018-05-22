@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_navigate_next_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\Logan\Downloads\baseline-help-24px.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_night_mode" />
+                            <entry key="sourceFile" value="C:\Users\Logan\Downloads\weather-night.svg" />
                           </map>
                         </option>
                       </PersistentState>
