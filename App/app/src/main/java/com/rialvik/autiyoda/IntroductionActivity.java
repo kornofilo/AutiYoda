@@ -14,7 +14,10 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import static com.rialvik.autiyoda.R.drawable.ic_vocabulary_black_24dp;
 
 public class IntroductionActivity extends AppCompatActivity {
 
@@ -82,12 +85,14 @@ public class IntroductionActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_introduction, container, false);
             TextView titleTextView = rootView.findViewById(R.id.TextViewIntroductionTitle), descriptionTextView = rootView.findViewById(R.id.textView_Description);
             Button skipButton = rootView.findViewById(R.id.ButtonSkip), nextButton = rootView.findViewById(R.id.Button_Next);
+            ImageView imageIntroduction = rootView.findViewById(R.id.imageViewIntroduction);
             int next = 0;
 
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    imageIntroduction.setImageResource(R.drawable.ic_happy_black_24dp);
                     titleTextView.setText(R.string.Welcome);
                     descriptionTextView.setText(R.string.welcome_description);
                     next = 1;
@@ -95,12 +100,14 @@ public class IntroductionActivity extends AppCompatActivity {
 
                 case 2:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    imageIntroduction.setImageResource(R.drawable.ic_image_black_24dp);
                     titleTextView.setText(R.string.pictograms_introduction_title);
                     descriptionTextView.setText(R.string.pictograms_introduction_description);
                     next = 2;
                     break;
                 case 3:
                     rootView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                    imageIntroduction.setImageResource(R.drawable.ic_vocabulary_black_24dp);
                     titleTextView.setText(R.string.comunication_introduction_title);
                     descriptionTextView.setText(R.string.comunication_introduction_description);
                     nextButton.setText(R.string.finish);

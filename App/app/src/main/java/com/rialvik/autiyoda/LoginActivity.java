@@ -39,9 +39,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * A login screen that offers login via email/password.
- */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
 
     private UserLoginTask mAuthTask = null;
@@ -52,7 +49,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -314,8 +310,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                     }
                 });
-
-
     }
 
     @Override

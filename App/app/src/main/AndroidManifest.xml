@@ -55,7 +55,7 @@
         <activity android:name=".PasswordResetActivity" />
         <activity
             android:name=".IntroductionActivity"
-            android:label="@string/title_activity_introduction"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

@@ -135,4 +135,5 @@
     <string name="pictograms_introduction_description">Learn new activities step by step.</string>
     <string name="comunication_introduction_title">Learning by Speech Synthesis</string>
     <string name="comunication_introduction_description">Learn new words and phrases by touching the image on the screen and listening to its pronunciation.</string>
+    <string name="imageView_Introduction_Description">Introduction</string>
 </resources>
