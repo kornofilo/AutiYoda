@@ -40,7 +40,12 @@ public class MainActivity extends AppCompatActivity
         }
 
         setContentView(R.layout.activity_main);
+        drawerInitialization();
 
+
+    }
+
+    public void drawerInitialization(){
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

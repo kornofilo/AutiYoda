@@ -65,7 +65,7 @@
         <activity android:name=".VocabularyMenuActivity" />
         <activity android:name=".VocabularyAnimalsActivity" />
         <activity android:name=".VocabularyColorsActivity" />
-        <activity android:name=".VocabularyFruitsActivity"></activity>
+        <activity android:name=".VocabularyFruitsActivity"/>
     </application>
 
 </manifest>

@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         //Verificamos el tema seleccionado por el usuario
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
 
+
         boolean firstTime = pref.getBoolean("first_time", true);
         //Fragment de Bienvenida
         // Verificamos si el usuario ingresa a la aplicación por primera vez.
@@ -65,6 +66,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             startActivity(new Intent(this, IntroductionActivity.class));
             finish();
         }
+
+
 
         boolean tema = pref.getBoolean("nightMode_switch", false);
         //Dependiendo del valor recuperado, se establece el tema para la activity.
@@ -101,10 +104,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Verificamos si el usuario ya se encuentra logueado.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
-            // Si el usuario está logueado, lo trasladamos a la activity princial.
-            Intent itentMain = new Intent(this,MainActivity.class);
-            startActivity(itentMain);
-            finish();
+           getDefaultSection();
         }
     }
 
@@ -301,9 +301,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                            finish();
-                            startActivity(intent);
+                            getDefaultSection();
                         }else {
                             try {
                                 throw task.getException();
@@ -357,6 +355,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         });
         AlertDialog dialogSuccesMSG = builder.create();
         dialogSuccesMSG.show();
+    }
+
+    public void getDefaultSection(){
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        String defaultSection = pref.getString("default_section", "pic");
+        if (defaultSection.equals("pic")){
+            startActivity(new Intent(this, PictogramsMenuActivity.class));
+            finish();
+        } else{
+            startActivity(new Intent(this, VocabularyMenuActivity.class));
+            finish();
+        }
     }
 }
 
