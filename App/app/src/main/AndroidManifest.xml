@@ -59,12 +59,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".PictogramsMenuActivity"
-            android:label="@string/pictograms_introduction_title"/>
+            android:label="@string/habilities_learning"/>
 
-        <activity android:name=".VocabularyMenuActivity" />
-
+        <activity android:name=".VocabularyMenuActivity"
+            android:label="@string/vocabulary_learning"/>
         <activity android:name=".VocabularyAnimalsActivity"
             />
+
         <activity android:name=".VocabularyColorsActivity" />
         <activity android:name=".VocabularyFruitsActivity"/>
     </application>

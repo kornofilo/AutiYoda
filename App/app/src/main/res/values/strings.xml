@@ -132,6 +132,9 @@
     <string name="delete_account_warning">¿Realmente desea eliminar su cuenta?</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
+    <string name="habilities_learning">Aprendizaje de Habilidades</string>
+    <string name="vocabulary_learning">Aprendizaje de Vocabulario</string>
+
 
 
 </resources>
