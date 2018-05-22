@@ -20,9 +20,9 @@ public class VocabularyMenuActivity extends AppCompatActivity implements View.On
         checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
 
-        c_frutas =(ImageView) findViewById(R.id.icf);
-        c_animales=(ImageView) findViewById(R.id.ica);
-        c_colores =(ImageView) findViewById(R.id.icc);
+        c_frutas =  findViewById(R.id.icf);
+        c_animales= findViewById(R.id.ica);
+        c_colores = findViewById(R.id.icc);
         c_frutas.setOnClickListener(this);
         c_animales.setOnClickListener(this);
         c_colores.setOnClickListener(this);
@@ -34,18 +34,18 @@ public class VocabularyMenuActivity extends AppCompatActivity implements View.On
         switch (v.getId())
         {
             case R.id.icf:
-                /*Intent a = new Intent(VocabularyMenuActivity.this,Frutas.class);
-                startActivity(a);*/
+                Intent a = new Intent(VocabularyMenuActivity.this,VocabularyFruitsActivity.class);
+                startActivity(a);
                 break;
             case R.id.ica:
 
-               /* Intent b = new Intent(VocabularyMenuActivity.this,Animales.class);
-                startActivity(b);*/
+               Intent b = new Intent(VocabularyMenuActivity.this,VocabularyAnimalsActivity.class);
+               startActivity(b);
                 break;
             case R.id.icc:
 
-              /*  Intent c = new Intent(VocabularyMenuActivity.this,Colores.class);
-                startActivity(c);*/
+                Intent c = new Intent(VocabularyMenuActivity.this,VocabularyColorsActivity.class);
+                startActivity(c);
                 break;
 
         }

@@ -136,6 +136,10 @@
     <string name="success">Success!</string>
     <string name="ok" translatable="false">OK</string>
 
+    <!-- Manejo de Errores -->
+    <string name="error_no_connection">No se puede realizar la conexión con el servidor. Compruebe la conexión a internet.</string>
+    <string name="error_not_found">No se encuentra algún usuario registrado con la dirección de correo ingresada. Por favor verifique sus datos de inicio de sesión.</string>
+    <string name="error_wrong_password">La contraseña ingresada es incorrecta.</string>
 
 
 </resources>

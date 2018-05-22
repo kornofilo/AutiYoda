@@ -3,6 +3,8 @@ package com.rialvik.autiyoda;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -24,20 +26,18 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor>, OnClickListener {
 
@@ -305,7 +305,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             finish();
                             startActivity(intent);
                         }else {
-
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseAuthInvalidCredentialsException | FirebaseAuthInvalidUserException e) {
+                                //Si el usuario no existe...
+                                if(e.getErrorCode().equals("ERROR_USER_NOT_FOUND"))
+                                    notifyUser(getString(R.string.error_not_found));
+                                //Si la contraseña ingresada es incorrecta...
+                                else if (e.getErrorCode().equals("ERROR_WRONG_PASSWORD"))
+                                    notifyUser(getString(R.string.error_wrong_password));
+                            } catch (FirebaseNetworkException e) {
+                                //Si no existe conexión a internet...
+                                notifyUser(getString(R.string.error_no_connection));
+                            } catch (Exception e) {
+                                notifyUser(task.getException().getMessage());
+                            }
                         }
 
                     }
@@ -329,6 +343,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 break;
             }
         }
+    }
+
+    public void notifyUser(String message){
+        //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        builder.setMessage(message)
+                .setTitle(R.string.error);
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+            }
+        });
+        AlertDialog dialogSuccesMSG = builder.create();
+        dialogSuccesMSG.show();
     }
 }
 
