@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_pictogram) {
+            startActivity(new Intent(this, PictogramsMenuActivity.class));
 
         }else if (id == R.id.nav_vocabulary) {
             startActivity(new Intent(this, MapsActivity.class));

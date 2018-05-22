@@ -56,7 +56,13 @@
         <activity
             android:name=".IntroductionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PictogramsActivity"
+            android:label="@string/title_activity_pictograms"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".PictogramsMenuActivity"/>
     </application>
 
 </manifest>
