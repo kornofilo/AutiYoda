@@ -343,7 +343,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    public void notifyUser(String message){
+    private void notifyUser(String message){
         //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         builder.setMessage(message)
@@ -357,7 +357,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         dialogSuccesMSG.show();
     }
 
-    public void getDefaultSection(){
+    private void getDefaultSection(){
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         String defaultSection = pref.getString("default_section", "pic");
         if (defaultSection.equals("pic")){

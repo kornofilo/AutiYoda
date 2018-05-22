@@ -33,8 +33,6 @@
     </string-array>
 
 
-
-
     <string-array name="list_preference_entries">
         <item>Entry 1</item>
         <item>Entry 2</item>
@@ -87,7 +85,6 @@
     <string name="sign_up_indications">Por favor, proporcione los siguientes datos para crear su cuenta.</string>
     <string name="deleteAccount">Eliminar Cuenta</string>
     <string name="prompt_password_confirmation">Confirmación de Contraseña</string>
-    <string name="dialog_su_message">El usuario ha sido creado exitosamente</string>
     <string name="sign_up_form_title">Registrarse</string>
     <string name="prompt_age">Edad (en años)</string>
     <string name="prompt_name">Nombre</string>
@@ -114,8 +111,6 @@
     <string name="nav_header_desc">Navigation header</string>
 
 
-
-
     <string name="account">Account</string>
     <string name="profile">Profile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -123,6 +118,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="success">Success!</string>
     <string name="ok" translatable="false">OK</string>
+
+    <string name="success_signuup_message">El usuario ha sido creado exitosamente.</string>
+
 
     <!-- Manejo de Errores -->
     <string name="error_no_connection">No se puede realizar la conexión con el servidor. Compruebe la conexión a internet.</string>
@@ -134,7 +132,9 @@
     <string name="no">No</string>
     <string name="habilities_learning">Aprendizaje de Habilidades</string>
     <string name="vocabulary_learning">Aprendizaje de Vocabulario</string>
-
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="error_password_mismatch">Las contraseñas ingresadas nos coinciden</string>
+    <string name="error_user_collision">Ya existe un usuario asociado a la dirección de correo electrónico ingresada. Intente con otra dirección de correo electrónico.</string>
 
 
 </resources>

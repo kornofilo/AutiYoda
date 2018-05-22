@@ -57,17 +57,19 @@
             android:name=".IntroductionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".PictogramsMenuActivity"
-            android:label="@string/habilities_learning"/>
-
-        <activity android:name=".VocabularyMenuActivity"
-            android:label="@string/vocabulary_learning"/>
-        <activity android:name=".VocabularyAnimalsActivity"
-            />
-
+        <activity
+            android:name=".PictogramsMenuActivity"
+            android:label="@string/habilities_learning" />
+        <activity
+            android:name=".VocabularyMenuActivity"
+            android:label="@string/vocabulary_learning" />
+        <activity android:name=".VocabularyAnimalsActivity" />
         <activity android:name=".VocabularyColorsActivity" />
-        <activity android:name=".VocabularyFruitsActivity"/>
+        <activity android:name=".VocabularyFruitsActivity" />
+        <activity
+            android:name=".PictogramsActivity"
+            android:label="@string/title_activity_pictograms"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

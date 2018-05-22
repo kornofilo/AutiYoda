@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -31,8 +32,12 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
@@ -43,7 +48,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
 
     // UI references.
     private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
+    private EditText mPasswordView, mConfirmPasswordView;
     private View mProgressView;
     private View mLoginFormView;
     private FirebaseAuth mAuth;
@@ -69,7 +74,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
 
 
         mPasswordView = findViewById(R.id.password);
-
+        mConfirmPasswordView = findViewById(R.id.password_confirmation);
 
         Button mEmailSignInButton = findViewById(R.id.email_sign_up_button);
         mEmailSignInButton.setOnClickListener(new View.OnClickListener() {
@@ -83,18 +88,6 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
         mProgressView = findViewById(R.id.sign_up_progress);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Verificamos si el usuario ya se encuentra logueado.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            // Si el usuario está logueado, lo trasladamos a la activity princial.
-            Intent itentMain = new Intent(this,MainActivity.class);
-            startActivity(itentMain);
-        }
-    }
-
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -102,25 +95,28 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
      * errors are presented and no actual login attempt is made.
      */
     private void attemptSignUp() {
-        // Reset errors.
+        // Reseteamos los errores.
         mEmailView.setError(null);
         mPasswordView.setError(null);
+        mConfirmPasswordView.setError(null);
 
-        // Store values at the time of the login attempt.
+
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
+        String confirmPassword = mConfirmPasswordView.getText().toString();
+
 
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
+        // Verificamos si el usuario ingresó una contraseña y si esta es válida.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
-        // Check for a valid email address.
+        // Verificamos si la dirección de email es válida.
         if (TextUtils.isEmpty(email)) {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
@@ -129,6 +125,11 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
+        }
+
+        // Verificamos si las contraseñas coinciden.
+        if(!password.equals(confirmPassword)){
+            mConfirmPasswordView.setError(getString(R.string.error_password_mismatch));
         }
 
         if (cancel) {
@@ -249,7 +250,6 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
         UserSignUpTask(String email, String password) {
             mEmail = email;
             mPassword = password;
-
         }
 
         @Override
@@ -288,24 +288,33 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            signUpSuccesMSG();
+                            notifyUser(getString(R.string.success),getString(R.string.success_signuup_message));
+                            finish();
                         } else {
-
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseAuthUserCollisionException e) {
+                                notifyUser(getString(R.string.error),getString(R.string.error_user_collision));
+                            } catch (FirebaseNetworkException e) {
+                                //Si no existe conexión a internet...
+                                notifyUser(getString(R.string.error),getString(R.string.error_no_connection));
+                            } catch (Exception e) {
+                                notifyUser(getString(R.string.error),task.getException().getMessage());
+                            }
                         }
                     }
                 });
     }
 
-    public void signUpSuccesMSG(){
+
+    public void notifyUser(String title, String message){
         //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
-        builder.setMessage(R.string.dialog_su_message)
-                .setTitle(R.string.success);
+        builder.setMessage(message)
+                .setTitle(title);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                Intent intent = new Intent(SignUpActivity.this,MainActivity.class);
-                finish();
-                startActivity(intent);
+
             }
         });
         AlertDialog dialogSuccesMSG = builder.create();
