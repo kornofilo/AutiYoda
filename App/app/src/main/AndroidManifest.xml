@@ -57,13 +57,14 @@
             android:name=".IntroductionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".PictogramsActivity"
-            android:label="@string/title_activity_pictograms"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PictogramsMenuActivity" />
+
+        <activity android:name=".PictogramsMenuActivity"
+            android:label="@string/pictograms_introduction_title"/>
+
         <activity android:name=".VocabularyMenuActivity" />
-        <activity android:name=".VocabularyAnimalsActivity" />
+
+        <activity android:name=".VocabularyAnimalsActivity"
+            />
         <activity android:name=".VocabularyColorsActivity" />
         <activity android:name=".VocabularyFruitsActivity"/>
     </application>
