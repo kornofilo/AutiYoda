@@ -63,6 +63,10 @@
         <item>3</item>
     </string-array>
 
+    <string name="default_section_title">Sección Predeterminada</string>
+    <string name="default_section_description">Seleccione la sección que le gustaría que se mostrara cada vez que se inicia la aplicación</string>
+
+
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
@@ -127,7 +131,6 @@
         <item>1</item>
     </string-array>
 
-    <string name="defaultSection">Default Section</string>
     <string name="account">Account</string>
     <string name="profile">Profile</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -138,7 +141,7 @@
 
     <!-- Manejo de Errores -->
     <string name="error_no_connection">No se puede realizar la conexión con el servidor. Compruebe la conexión a internet.</string>
-    <string name="error_not_found">No se encuentra algún usuario registrado con la dirección de correo ingresada. Por favor verifique sus datos de inicio de sesión.</string>
+    <string name="error_user_not_found">No se encuentra algún usuario registrado con la dirección de correo ingresada. Por favor verifique sus datos ingresados.</string>
     <string name="error_wrong_password">La contraseña ingresada es incorrecta.</string>
 
 

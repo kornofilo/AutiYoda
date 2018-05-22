@@ -19,7 +19,8 @@
             android:key="mode"
             android:negativeButtonText="@null"
             android:positiveButtonText="@null"
-            android:title="@string/defaultSection" />
+            android:title="@string/default_section_title"
+            android:summary="@string/default_section_description" />
 
     </PreferenceCategory>
 

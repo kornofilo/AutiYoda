@@ -12,7 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseError;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthEmailException;
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+
 import java.util.Objects;
 
 public class PasswordResetActivity extends AppCompatActivity {
@@ -59,19 +67,31 @@ public class PasswordResetActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful())
-                            alertDialogs(getString(R.string.success),getString(R.string.password_reset_succesful));
+                            notifyUser(getString(R.string.success),getString(R.string.password_reset_succesful));
                         else {
-                            alertDialogs(getString(R.string.error), Objects.requireNonNull(task.getException()).getMessage());
+                            try {
+                                throw task.getException();
+                            } catch (FirebaseNetworkException e) {
+                                //Si no existe conexión a internet...
+                                notifyUser(getString(R.string.error), getString(R.string.error_no_connection));
+                            } catch (Exception e) {
+                                notifyUser(getString(R.string.error), getString(R.string.error_user_not_found));
+                            }
                         }
                     }
                 });
     }
 
-    public void alertDialogs(String title, String message){
-        //Creación del Alert Dialog que mostrará al usuario si la operación de restablecimiento de contraseña falló o fue un éxito.
-        AlertDialog.Builder builder = new AlertDialog.Builder(PasswordResetActivity.this, R.style.DarkTheme_Dialogs);
+
+    private boolean isEmailValid(String email) {
+        return email.contains("@");
+    }
+
+    public void notifyUser(String title, String message){
+        //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
+        AlertDialog.Builder builder = new AlertDialog.Builder(PasswordResetActivity.this);
         builder.setMessage(message)
-                .setTitle(title);
+                .setTitle(R.string.error);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
@@ -79,9 +99,5 @@ public class PasswordResetActivity extends AppCompatActivity {
         });
         AlertDialog dialogSuccesMSG = builder.create();
         dialogSuccesMSG.show();
-    }
-
-    private boolean isEmailValid(String email) {
-        return email.contains("@");
     }
 }

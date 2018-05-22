@@ -310,7 +310,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             } catch (FirebaseAuthInvalidCredentialsException | FirebaseAuthInvalidUserException e) {
                                 //Si el usuario no existe...
                                 if(e.getErrorCode().equals("ERROR_USER_NOT_FOUND"))
-                                    notifyUser(getString(R.string.error_not_found));
+                                    notifyUser(getString(R.string.error_user_not_found));
                                 //Si la contraseña ingresada es incorrecta...
                                 else if (e.getErrorCode().equals("ERROR_WRONG_PASSWORD"))
                                     notifyUser(getString(R.string.error_wrong_password));
