@@ -124,9 +124,9 @@ public class PictogramsMenuActivity extends AppCompatActivity
             switch (view.getId()) {
                 case R.id.mano: {
                     pasos = this.getResources().getStringArray(R.array.hand_washing_steps);
-                    imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6};
+                    imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6,R.drawable.congratulations};
                     intent.putExtra("nombre", getString(R.string.hand_washing));
-                    intent.putExtra("cantidad_pasos",6);
+                    intent.putExtra("cantidad_pasos",7);
                     intent.putExtra("pasos",pasos);
                     intent.putExtra("img_pasos",imgPasos);
                     startActivity(intent);

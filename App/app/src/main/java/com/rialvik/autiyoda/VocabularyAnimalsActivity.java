@@ -22,10 +22,10 @@ public class VocabularyAnimalsActivity extends AppCompatActivity implements View
         checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
 
-        c_animales =(ImageView) findViewById(R.id.ivna);
-        v_leon =(ImageView) findViewById(R.id.ival);
-        v_vaca =(ImageView) findViewById(R.id.ivav);
-        v_jirafa =(ImageView) findViewById(R.id.ivaj);
+        c_animales = findViewById(R.id.ivna);
+        v_leon = findViewById(R.id.ival);
+        v_vaca = findViewById(R.id.ivav);
+        v_jirafa = findViewById(R.id.ivaj);
 
 
 

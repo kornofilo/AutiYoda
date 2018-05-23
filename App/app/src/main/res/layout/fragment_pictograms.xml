@@ -68,16 +68,16 @@
         android:contentDescription="@string/imageView_Introduction_Description"
         android:src="@drawable/ic_happy_black_24dp" />
 
-    <TextView
-        android:id="@+id/TextViewStep"
-        android:layout_width="372dp"
-        android:layout_height="150dp"
+    <Button
+        android:id="@+id/ButtonStep"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:padding="12dp"
         android:text="@string/countries"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold" />
 

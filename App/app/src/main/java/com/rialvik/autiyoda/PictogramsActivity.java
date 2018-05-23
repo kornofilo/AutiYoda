@@ -1,6 +1,7 @@
 package com.rialvik.autiyoda;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -17,13 +18,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.zip.Inflater;
 
-public class PictogramsActivity extends AppCompatActivity {
+public class PictogramsActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
+    private static final int MY_DATA_CHECK_CODE = 0;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -39,6 +43,7 @@ public class PictogramsActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private static Habilidad habilidad = new Habilidad();
+    private static TextToSpeech tts;
 
 
     @Override
@@ -46,9 +51,11 @@ public class PictogramsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_pictograms);
+        tts = new TextToSpeech(this, this);
         feedLayout();
-        System.out.println("1. " +habilidad.getName());
-
+        Intent checkIntent = new Intent();
+        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,7 +66,6 @@ public class PictogramsActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        System.out.println("2. " +habilidad.getName());
 
     }
 
@@ -77,6 +83,17 @@ public class PictogramsActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onInit(int status) {
+        tts.setLanguage(new Locale(Locale.getDefault().getLanguage()));
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -86,6 +103,7 @@ public class PictogramsActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+
 
         public PlaceholderFragment() {
         }
@@ -113,14 +131,30 @@ public class PictogramsActivity extends AppCompatActivity {
             return rootView;
         }
 
-        public void feedLayout(View rootView, int position){
-            String pasos[] = habilidad.getPasos();
+        public void feedLayout(View rootView, final int position){
+            final String pasos[] = habilidad.getPasos();
             int img_pasos[] = habilidad.getImagenesPasos();
-            TextView textViewHabilityName = rootView.findViewById(R.id.TextViewHabilityName), textViewStep = rootView.findViewById(R.id.TextViewStep);
+            TextView textViewHabilityName = rootView.findViewById(R.id.TextViewHabilityName);
+            Button ButtonStep = rootView.findViewById(R.id.ButtonStep);
             ImageView imageViewStep = rootView.findViewById(R.id.imageViewStep);
             textViewHabilityName.setText(habilidad.getName());
-            textViewStep.setText(pasos[position]);
+            ButtonStep.setText(pasos[position]);
+
             imageViewStep.setImageResource(img_pasos[position]);
+            imageViewStep.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    tts.speak(pasos[position], TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+            });
+
+            ButtonStep.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    tts.speak(pasos[position], TextToSpeech.QUEUE_FLUSH, null, null);
+                }
+            });
+
 
         }
 

@@ -126,7 +126,11 @@
         <item>4. Enjuagar Manos</item>
         <item>5. Cerrar Llave</item>
         <item>6. Secar Manos</item>
+        <item>¡Bien Hecho! ¡Tus manos ya están limpias!</item>
+
     </string-array>
+    <string name="congratularions">¡Bien Hecho!</string>
+
 
 
 </resources>
