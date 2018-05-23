@@ -32,19 +32,6 @@
         <item>-1</item>
     </string-array>
 
-
-    <string-array name="list_preference_entries">
-        <item>Entry 1</item>
-        <item>Entry 2</item>
-        <item>Entry 3</item>
-    </string-array>
-
-    <string-array name="list_preference_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
     <!-- Sección Predeterminada -->
     <string name="default_section_title">Sección Predeterminada</string>
     <string name="default_section_description">Seleccione la sección que le gustaría que se mostrara cada vez que se inicia la aplicación</string>
@@ -56,11 +43,6 @@
         <item>pic</item>
         <item>voc</item>
     </string-array>
-
-
-    <string-array name="multi_select_list_preference_default_value" />
-
-    <string name="pref_title_system_sync_settings">System sync settings</string>
 
     <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Notifications</string>
@@ -100,10 +82,10 @@
     <string name="skip">Omitir</string>
     <string name="finish">Finalizar</string>
     <string name="next">Siguiente</string>
-    <string name="welcome_description">Autiyoda es una aplicación móvil cuyo objetivo es ayudar en la mejora de la habilidad verbal y la realización de actividades diarias.</string>
+    <string name="welcome_description">Autiyoda es una aplicación móvil cuyo objetivo es ayudar en la mejora de la habilidad verbal y la realización de actividades diarias a personas con el trastorno de espectro autista.</string>
     <string name="comunication_introduction_description">Aprende nuevas palabras y frases al tocar la imagen en pantalla y escuchar su pronunciación.</string>
     <string name="comunication_introduction_title">Aprendizaje por Síntesis de Voz</string>
-    <string name="pictograms_introduction_description">Aprende nuevas actividades paso a paso.</string>
+    <string name="pictograms_introduction_description">Aprende a realizar actividades diarias paso a paso guiado de manera visual y auditiva.</string>
     <string name="pictograms_introduction_title">Aprendizaje por Pictogramas</string>
 
     <string name="title_activity_pictograms">PictogramsActivity</string>
@@ -127,12 +109,11 @@
     <string name="error_user_not_found">No se encuentra algún usuario registrado con la dirección de correo ingresada. Por favor verifique sus datos ingresados.</string>
     <string name="error_wrong_password">La contraseña ingresada es incorrecta.</string>
     <string name="warning">Atención</string>
-    <string name="delete_account_warning">¿Realmente desea eliminar su cuenta?</string>
-    <string name="yes">Sí</string>
+    <string name="delete_account_warning">¿Realmente desea eliminar su cuenta? Para completar esta operación debe proveer su contraseña.</string>
+    <string name="delete">Eliminar</string>
     <string name="no">No</string>
     <string name="habilities_learning">Aprendizaje de Habilidades</string>
     <string name="vocabulary_learning">Aprendizaje de Vocabulario</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="error_password_mismatch">Las contraseñas ingresadas nos coinciden</string>
     <string name="error_user_collision">Ya existe un usuario asociado a la dirección de correo electrónico ingresada. Intente con otra dirección de correo electrónico.</string>
     <string name="hand_washing">Lavarse las Manos</string>

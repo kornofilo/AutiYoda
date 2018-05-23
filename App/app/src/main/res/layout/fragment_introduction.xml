@@ -85,8 +85,8 @@
 
     <ImageView
         android:id="@+id/imageViewIntroduction"
-        android:layout_width="124dp"
-        android:layout_height="117dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="136dp"
@@ -100,12 +100,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="194dp"
-        android:text="@string/welcome_description"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="147dp"
         android:padding="12dp"
-        android:textColor="@android:color/white"
+        android:text="@string/welcome_description"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="14sp" />
 
 </RelativeLayout>

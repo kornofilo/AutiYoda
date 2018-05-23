@@ -6,13 +6,6 @@ public class Habilidad {
     private String pasos[];
     private int imagenesPasos[];
 
-    public Habilidad(){
-        this.name = name;
-        this.cantidadPasos = cantidadPasos;
-        this.pasos = pasos;
-        this.imagenesPasos = imagenesPasos;
-    }
-
     public String getName() {
         return name;
     }

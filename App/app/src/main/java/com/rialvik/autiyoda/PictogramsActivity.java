@@ -110,12 +110,6 @@ public class PictogramsActivity extends AppCompatActivity {
             for (int i=1; i <= getArguments().getInt(ARG_SECTION_NUMBER); i++){
                 feedLayout(rootView,i-1);
             }
-            /*switch (getArguments().getInt(ARG_SECTION_NUMBER)){
-                case 1:
-                    feedLayout(rootView,1);
-                    break;
-            }//Fin Switch-Case.*/
-
             return rootView;
         }
 

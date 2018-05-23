@@ -91,13 +91,13 @@ public class PasswordResetActivity extends AppCompatActivity {
         //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
         AlertDialog.Builder builder = new AlertDialog.Builder(PasswordResetActivity.this);
         builder.setMessage(message)
-                .setTitle(R.string.error);
+                .setTitle(title);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
             }
         });
-        AlertDialog dialogSuccesMSG = builder.create();
-        dialogSuccesMSG.show();
+        AlertDialog dialogSuccessMSG = builder.create();
+        dialogSuccessMSG.show();
     }
 }
