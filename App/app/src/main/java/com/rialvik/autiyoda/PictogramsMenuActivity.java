@@ -10,18 +10,26 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class PictogramsMenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     TextView textViewUsername;
     String userEmail;
+
+    Button manos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +49,7 @@ public class PictogramsMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_pictograms_menu);
         drawerInitialization();
 
-
+        manos = findViewById(R.id.mano);
     }
 
     public void drawerInitialization(){
@@ -110,5 +118,24 @@ public class PictogramsMenuActivity extends AppCompatActivity
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
         return user.getEmail();
+    }
+
+    @Override
+    public void onClick(View view) {
+            Intent intent= new Intent(this,PictogramsActivity.class);
+            String pasos[];
+            int imgPasos[];
+            switch (view.getId()) {
+                case R.id.mano: {
+                    pasos = this.getResources().getStringArray(R.array.hand_washing_steps);
+                    imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6};
+                    intent.putExtra("nombre", getString(R.string.hand_washing));
+                    intent.putExtra("cantidad_pasos",6);
+                    intent.putExtra("pasos",pasos);
+                    intent.putExtra("img_pasos",imgPasos);
+                    startActivity(intent);
+                    break;
+            }
+        }
     }
 }

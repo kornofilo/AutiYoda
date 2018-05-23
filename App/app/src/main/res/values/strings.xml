@@ -111,8 +111,8 @@
     <string name="nav_header_desc">Navigation header</string>
 
 
-    <string name="account">Account</string>
-    <string name="profile">Profile</string>
+    <string name="account">Cuenta</string>
+    <string name="profile">Perfil</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
@@ -135,6 +135,17 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="error_password_mismatch">Las contraseñas ingresadas nos coinciden</string>
     <string name="error_user_collision">Ya existe un usuario asociado a la dirección de correo electrónico ingresada. Intente con otra dirección de correo electrónico.</string>
+    <string name="hand_washing">Lavarse las Manos</string>
+
+    <!-- Pictogramas -->
+    <string-array name="hand_washing_steps">
+        <item>1. Abrir Llave</item>
+        <item>2. Aplicar Jabon</item>
+        <item>3. Lavar Manos</item>
+        <item>4. Enjuagar Manos</item>
+        <item>5. Cerrar Llave</item>
+        <item>6. Secar Manos</item>
+    </string-array>
 
 
 </resources>
