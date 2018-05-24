@@ -140,18 +140,38 @@ public class VocabularyMenuActivity extends AppCompatActivity
 
     void feedScreenShow(int position){
         Intent intent= new Intent(this,ScreenShowActivity.class);
-        String pasos[];
-        int imgPasos[];
+        String items[];
+        int imgItems[];
 
         switch (position){
             case 0:
-                pasos = this.getResources().getStringArray(R.array.hand_washing_steps);
-                imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6,R.drawable.congratulations};
-                intent.putExtra("name", getString(R.string.hand_washing));
-                intent.putExtra("num_elements",7);
-                intent.putExtra("elements",pasos);
-                intent.putExtra("img_elements",imgPasos);
+                items = this.getResources().getStringArray(R.array.vocabulary_alphabet);
+                imgItems = new int[] {R.drawable.alphabet_a,R.drawable.alphabet_b, R.drawable.alphabet_c, R.drawable.alphabet_d, R.drawable.alphabet_e};
+                intent.putExtra("name", getString(R.string.vocabulary_category_alphabet));
+                intent.putExtra("num_elements",5);
+                intent.putExtra("elements",items);
+                intent.putExtra("img_elements",imgItems);
                 startActivity(intent);
+                break;
+            case 1:
+                items = this.getResources().getStringArray(R.array.vocabulary_animals);
+                imgItems = new int[] {R.drawable.animals_horse,R.drawable.animals_hen, R.drawable.animals_giraffe, R.drawable.animals_lion, R.drawable.animals_frog};
+                intent.putExtra("name", getString(R.string.vocabulary_category_animals));
+                intent.putExtra("num_elements",5);
+                intent.putExtra("elements",items);
+                intent.putExtra("img_elements",imgItems);
+                startActivity(intent);
+                break;
+            case 2:
+                items = this.getResources().getStringArray(R.array.vocabulary_fruits);
+                imgItems = new int[] {R.drawable.fruits_cherry,R.drawable.fruits_lemon, R.drawable.fruits_pear, R.drawable.fruits_watermelon, R.drawable.fruits_grapes};
+                intent.putExtra("name", getString(R.string.vocabulary_category_fuits));
+                intent.putExtra("num_elements",5);
+                intent.putExtra("elements",items);
+                intent.putExtra("img_elements",imgItems);
+                startActivity(intent);
+                break;
+
         }
     }
 

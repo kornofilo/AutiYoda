@@ -116,9 +116,13 @@
     <string name="vocabulary_learning">Aprendizaje de Vocabulario</string>
     <string name="error_password_mismatch">Las contraseñas ingresadas nos coinciden</string>
     <string name="error_user_collision">Ya existe un usuario asociado a la dirección de correo electrónico ingresada. Intente con otra dirección de correo electrónico.</string>
-    <string name="hand_washing">Lavarse las Manos</string>
+
+    <!-- Custom listview -->
+    <string name="item_imageView">Imagen de Item</string>
+
 
     <!-- Pictogramas -->
+    <string name="hand_washing">Lavarse las Manos</string>
     <string-array name="hand_washing_steps">
         <item>1. Abrir Llave</item>
         <item>2. Aplicar Jabon</item>
@@ -127,15 +131,43 @@
         <item>5. Cerrar Llave</item>
         <item>6. Secar Manos</item>
         <item>¡Bien Hecho! ¡Tus manos ya están limpias!</item>
-
     </string-array>
+
     <string name="congratularions">¡Bien Hecho!</string>
-    <string name="item_imageView">Imagen de Item</string>
     <string name="habilities_list">Lista de Habilidades</string>
-    <string name="vocabulary_category_colors">Colores</string>
-    <string name="vocabulary_category_animals">Animales</string>
-    <string name="vocabulary_category_fuits">Frutas</string>
+
+
+    <!-- Vocabulario -->
+
     <string name="vocabulary_category_alphabet">Abecedario</string>
+
+    <string-array name="vocabulary_alphabet">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+    <string name="vocabulary_category_animals">Animales</string>
+    <string-array name="vocabulary_animals">
+        <item>Caballo</item>
+        <item>Gallina</item>
+        <item>Jirafa</item>
+        <item>León</item>
+        <item>Rana</item>
+    </string-array>
+
+    <string name="vocabulary_category_fuits">Frutas</string>
+    <string-array name="vocabulary_fruits">
+        <item>Cereza</item>
+        <item>Limón</item>
+        <item>Pera</item>
+        <item>Sandía</item>
+        <item>Uvas</item>
+    </string-array>
+
+
 
 
 </resources>
