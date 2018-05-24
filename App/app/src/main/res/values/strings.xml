@@ -130,7 +130,8 @@
 
     </string-array>
     <string name="congratularions">¡Bien Hecho!</string>
-
+    <string name="item_imageView">Imagen de Item</string>
+    <string name="habilities_list">Lista de Habilidades</string>
 
 
 </resources>

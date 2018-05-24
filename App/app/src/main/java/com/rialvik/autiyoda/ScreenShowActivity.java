@@ -2,8 +2,6 @@ package com.rialvik.autiyoda;
 
 import android.content.Intent;
 import android.speech.tts.TextToSpeech;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -13,8 +11,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -23,9 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Locale;
-import java.util.zip.Inflater;
 
-public class PictogramsActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
+public class ScreenShowActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     private static final int MY_DATA_CHECK_CODE = 0;
     /**
@@ -42,7 +37,7 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-    private static Habilidad habilidad = new Habilidad();
+    private static SectionElements sectionElements = new SectionElements();
     private static TextToSpeech tts;
 
 
@@ -50,7 +45,7 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_pictograms);
+        setContentView(R.layout.activity_screen_show);
         tts = new TextToSpeech(this, this);
         feedLayout();
         Intent checkIntent = new Intent();
@@ -74,10 +69,10 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
         Bundle extras = intent.getExtras();
 
         if(extras != null){
-            habilidad.setName(extras.getString("nombre"));
-            habilidad.setCantidadPasos(extras.getInt("cantidad_pasos"));
-            habilidad.setPasos(extras.getStringArray("pasos"));
-            habilidad.setImagenesPasos(extras.getIntArray("img_pasos"));
+            sectionElements.setTitle(extras.getString("name"));
+            sectionElements.setNumElements(extras.getInt("num_elements"));
+            sectionElements.setElements(extras.getStringArray("elements"));
+            sectionElements.setImgElements(extras.getIntArray("img_elements"));
         }
 
     }
@@ -123,7 +118,7 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_pictograms, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_screen_show, container, false);
 
             for (int i=1; i <= getArguments().getInt(ARG_SECTION_NUMBER); i++){
                 feedLayout(rootView,i-1);
@@ -132,12 +127,12 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
         }
 
         public void feedLayout(View rootView, final int position){
-            final String pasos[] = habilidad.getPasos();
-            int img_pasos[] = habilidad.getImagenesPasos();
+            final String pasos[] = sectionElements.getElements();
+            int img_pasos[] = sectionElements.getImgElements();
             TextView textViewHabilityName = rootView.findViewById(R.id.TextViewHabilityName);
             Button ButtonStep = rootView.findViewById(R.id.ButtonStep);
             ImageView imageViewStep = rootView.findViewById(R.id.imageViewStep);
-            textViewHabilityName.setText(habilidad.getName());
+            textViewHabilityName.setText(sectionElements.getTitle());
             ButtonStep.setText(pasos[position]);
 
             imageViewStep.setImageResource(img_pasos[position]);
@@ -180,7 +175,7 @@ public class PictogramsActivity extends AppCompatActivity implements TextToSpeec
 
         @Override
         public int getCount() {
-            return habilidad.getCantidadPasos();
+            return sectionElements.getNumElements();
         }
     }
 }
