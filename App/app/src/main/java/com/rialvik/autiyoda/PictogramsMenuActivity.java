@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -56,6 +57,13 @@ public class PictogramsMenuActivity extends AppCompatActivity
 
         customListViewAdapter = new CustomListViewAdapter(this,habilitiesList);
         listView.setAdapter(customListViewAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                feedScreenShow(position);
+            }
+        });
 
     }
 
@@ -125,6 +133,23 @@ public class PictogramsMenuActivity extends AppCompatActivity
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         assert user != null;
         return user.getEmail();
+    }
+
+    void feedScreenShow(int position){
+        Intent intent= new Intent(this,ScreenShowActivity.class);
+        String pasos[];
+        int imgPasos[];
+
+        switch (position){
+            case 0:
+                pasos = this.getResources().getStringArray(R.array.hand_washing_steps);
+                imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6,R.drawable.congratulations};
+                intent.putExtra("name", getString(R.string.hand_washing));
+                intent.putExtra("num_elements",7);
+                intent.putExtra("elements",pasos);
+                intent.putExtra("img_elements",imgPasos);
+                startActivity(intent);
+        }
     }
 
 

@@ -59,9 +59,6 @@
         <activity
             android:name=".VocabularyMenuActivity"
             android:label="@string/vocabulary_learning" />
-        <activity android:name=".VocabularyAnimalsActivity" />
-        <activity android:name=".VocabularyColorsActivity" />
-        <activity android:name=".VocabularyFruitsActivity" />
         <activity
             android:name=".ScreenShowActivity"
             android:screenOrientation="portrait"

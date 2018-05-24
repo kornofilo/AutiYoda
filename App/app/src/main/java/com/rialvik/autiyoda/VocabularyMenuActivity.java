@@ -14,20 +14,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class VocabularyMenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView textViewUsername;
     String userEmail;
 
-    ImageView c_frutas,c_animales,c_colores;
-    private static final  int MY_DATA_CHECK_CODE = 1;
+    private ListView listView;
+    private CustomListViewAdapter customListViewAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,19 +52,23 @@ public class VocabularyMenuActivity extends AppCompatActivity
         setContentView(R.layout.activity_vocabulary_menu);
         drawerInitialization();
 
-        Intent checkIntent = new Intent();
-        checkIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-        startActivityForResult(checkIntent, MY_DATA_CHECK_CODE);
+        listView = findViewById(R.id.vocabulary_categories_list);
+        ArrayList<ListViewElements> categoriesList = new ArrayList<>();
+        categoriesList.add(new ListViewElements(R.drawable.category_alphabet, getString(R.string.vocabulary_category_alphabet),"Cantidad: 5"));
+        categoriesList.add(new ListViewElements(R.drawable.category_animals, getString(R.string.vocabulary_category_animals),"Cantidad: 5"));
+        categoriesList.add(new ListViewElements(R.drawable.category_fruits, getString(R.string.vocabulary_category_fuits),"Cantidad: 5"));
 
-        c_frutas =  findViewById(R.id.icf);
-        c_animales= findViewById(R.id.ica);
-        c_colores = findViewById(R.id.icc);
-        c_frutas.setOnClickListener(this);
-        c_animales.setOnClickListener(this);
-        c_colores.setOnClickListener(this);
+        customListViewAdapter = new CustomListViewAdapter(this,categoriesList);
+        listView.setAdapter(customListViewAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                feedScreenShow(position);
+            }
+        });
 
     }
-
 
     public void drawerInitialization(){
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -104,6 +113,8 @@ public class VocabularyMenuActivity extends AppCompatActivity
         if (id == R.id.nav_pictogram) {
             startActivity(new Intent(this, PictogramsMenuActivity.class));
 
+        }else if (id == R.id.nav_vocabulary) {
+            startActivity(new Intent(this, VocabularyMenuActivity.class));
         }
         else if (id == R.id.nav_maps) {
             startActivity(new Intent(this, MapsActivity.class));
@@ -127,26 +138,22 @@ public class VocabularyMenuActivity extends AppCompatActivity
         return user.getEmail();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId())
-        {
-            case R.id.icf:
-                Intent a = new Intent(VocabularyMenuActivity.this,VocabularyFruitsActivity.class);
-                startActivity(a);
-                break;
-            case R.id.ica:
+    void feedScreenShow(int position){
+        Intent intent= new Intent(this,ScreenShowActivity.class);
+        String pasos[];
+        int imgPasos[];
 
-                Intent b = new Intent(VocabularyMenuActivity.this,VocabularyAnimalsActivity.class);
-                startActivity(b);
-                break;
-            case R.id.icc:
-
-                Intent c = new Intent(VocabularyMenuActivity.this,VocabularyColorsActivity.class);
-                startActivity(c);
-                break;
-
+        switch (position){
+            case 0:
+                pasos = this.getResources().getStringArray(R.array.hand_washing_steps);
+                imgPasos = new int[] {R.drawable.hand_washing_1,R.drawable.hand_washing_2, R.drawable.hand_washing_3, R.drawable.hand_washing_4, R.drawable.hand_washing_5,R.drawable.hand_washing_6,R.drawable.congratulations};
+                intent.putExtra("name", getString(R.string.hand_washing));
+                intent.putExtra("num_elements",7);
+                intent.putExtra("elements",pasos);
+                intent.putExtra("img_elements",imgPasos);
+                startActivity(intent);
         }
-
     }
+
+
 }

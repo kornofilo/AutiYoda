@@ -1,14 +1,11 @@
 package com.rialvik.autiyoda;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,7 +90,7 @@ public class SettingsFragment extends PreferenceFragment {
         //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View inflator = inflater.inflate(R.layout.ask_passwork, null);
+        View inflator = inflater.inflate(R.layout.ask_password, null);
         builder.setView(inflator);
         builder.setMessage(message)
                 .setTitle(R.string.warning);

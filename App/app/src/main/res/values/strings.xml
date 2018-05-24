@@ -132,6 +132,10 @@
     <string name="congratularions">¡Bien Hecho!</string>
     <string name="item_imageView">Imagen de Item</string>
     <string name="habilities_list">Lista de Habilidades</string>
+    <string name="vocabulary_category_colors">Colores</string>
+    <string name="vocabulary_category_animals">Animales</string>
+    <string name="vocabulary_category_fuits">Frutas</string>
+    <string name="vocabulary_category_alphabet">Abecedario</string>
 
 
 </resources>

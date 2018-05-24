@@ -118,7 +118,7 @@ public class ScreenShowActivity extends AppCompatActivity implements TextToSpeec
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_screen_show, container, false);
+            View rootView= inflater.inflate(R.layout.fragment_screen_show, container, false);
 
             for (int i=1; i <= getArguments().getInt(ARG_SECTION_NUMBER); i++){
                 feedLayout(rootView,i-1);
