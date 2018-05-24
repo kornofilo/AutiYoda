@@ -47,6 +47,7 @@
     <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Notifications</string>
 
+
     <string name="pref_title_new_message_notifications">New message notifications</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
@@ -159,6 +160,7 @@
     </string-array>
 
     <string name="vocabulary_category_fuits">Frutas</string>
+    <string name="string_categories">Categorias</string>
     <string-array name="vocabulary_fruits">
         <item>Cereza</item>
         <item>Limón</item>
@@ -167,7 +169,11 @@
         <item>Uvas</item>
     </string-array>
 
-
+    <!-- Map Directory Spinner -->
+    <string-array name="map_directory_categories">
+        <item>Hospitales</item>
+        <item>Especialistas</item>
+    </string-array>
 
 
 </resources>

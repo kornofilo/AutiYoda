@@ -114,10 +114,7 @@ public class PictogramsMenuActivity extends AppCompatActivity
             startActivity(new Intent(this, VocabularyMenuActivity.class));
         }
         else if (id == R.id.nav_maps) {
-            startActivity(new Intent(this, MapsActivity.class));
-        } else if (id == R.id.nav_help) {
-
-
+            startActivity(new Intent(this, MapDirectoryActivity.class));
         }
         else if (id == R.id.nav_settings) {
             startActivity(new Intent(this, SettingsActivity.class));

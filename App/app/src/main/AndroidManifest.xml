@@ -62,7 +62,8 @@
         <activity
             android:name=".ScreenShowActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MapDirectoryActivity"></activity>
     </application>
 
 </manifest>

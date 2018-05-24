@@ -118,9 +118,6 @@ public class VocabularyMenuActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_maps) {
             startActivity(new Intent(this, MapsActivity.class));
-        } else if (id == R.id.nav_help) {
-
-
         }
         else if (id == R.id.nav_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
