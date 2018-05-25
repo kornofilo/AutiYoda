@@ -67,7 +67,7 @@
     <string name="profile">Perfil</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="success">Success!</string>
+    <string name="success">Éxito en la Operación</string>
     <string name="ok" translatable="false">OK</string>
 
     <string name="success_signuup_message">El usuario ha sido creado exitosamente.</string>

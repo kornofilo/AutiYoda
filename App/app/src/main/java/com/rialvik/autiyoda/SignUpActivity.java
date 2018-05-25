@@ -120,6 +120,8 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
         // Verificamos si las contraseñas coinciden.
         if(!password.equals(confirmPassword)){
             mConfirmPasswordView.setError(getString(R.string.error_password_mismatch));
+            focusView = mPasswordView;
+            cancel = true;
         }
 
         if (cancel) {
@@ -278,8 +280,7 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            notifyUser(getString(R.string.success),getString(R.string.success_signuup_message));
-                            finish();
+                            notifyUserSuccessfulSignUp(getString(R.string.success),getString(R.string.success_signuup_message));
                         } else {
                             try {
                                 throw task.getException();
@@ -305,6 +306,20 @@ public class SignUpActivity extends AppCompatActivity implements LoaderManager.L
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
+            }
+        });
+        AlertDialog dialogSuccesMSG = builder.create();
+        dialogSuccesMSG.show();
+    }
+
+    public void notifyUserSuccessfulSignUp(String title, String message){
+        //Creación del Alert Dialog que le indica al usuario que su cuenta ha sido creada exitosamente.
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
+        builder.setMessage(message)
+                .setTitle(title);
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
             }
         });
         AlertDialog dialogSuccesMSG = builder.create();
