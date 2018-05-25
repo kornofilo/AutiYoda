@@ -171,6 +171,7 @@
 
     <!-- Map Directory Spinner -->
     <string-array name="map_directory_categories">
+        <item>-----</item>
         <item>Hospitales</item>
         <item>Especialistas</item>
     </string-array>
