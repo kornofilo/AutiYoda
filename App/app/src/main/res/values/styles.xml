@@ -45,12 +45,4 @@
 
     </style>
 
-    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="menu_labels_style">
-        <item name="android:background">@drawable/fab_lable_background</item>
-        <item name="android:textColor">#f9f9f8</item>
-    </style>
 </resources>

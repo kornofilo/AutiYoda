@@ -54,6 +54,8 @@ public class PictogramsMenuActivity extends AppCompatActivity
         listView = findViewById(R.id.habilities_list);
         ArrayList<ListViewElements> habilitiesList = new ArrayList<>();
         habilitiesList.add(new ListViewElements(R.drawable.hand_washing_3, getString(R.string.hand_washing),"Pasos: 6"));
+        habilitiesList.add(new ListViewElements(R.drawable.make_the_bed_4, getString(R.string.make_the_bed),"Pasos: 6"));
+        habilitiesList.add(new ListViewElements(R.drawable.tooth_brushing_3, getString(R.string.tooth_brushing),"Pasos: 7"));
 
         customListViewAdapter = new CustomListViewAdapter(this,habilitiesList);
         listView.setAdapter(customListViewAdapter);
@@ -146,6 +148,25 @@ public class PictogramsMenuActivity extends AppCompatActivity
                 intent.putExtra("elements",pasos);
                 intent.putExtra("img_elements",imgPasos);
                 startActivity(intent);
+                break;
+            case 1:
+                pasos = this.getResources().getStringArray(R.array.make_the_bed_steps);
+                imgPasos = new int[] {R.drawable.make_the_bed_1,R.drawable.make_the_bed_2, R.drawable.make_the_bed_3, R.drawable.make_the_bed_4, R.drawable.make_the_bed_5,R.drawable.make_the_bed_6,R.drawable.congratulations};
+                intent.putExtra("name", getString(R.string.make_the_bed));
+                intent.putExtra("num_elements",7);
+                intent.putExtra("elements",pasos);
+                intent.putExtra("img_elements",imgPasos);
+                startActivity(intent);
+                break;
+            case 2:
+                pasos = this.getResources().getStringArray(R.array.tooth_brushing_steps);
+                imgPasos = new int[] {R.drawable.tooth_brushing_1,R.drawable.tooth_brushing_2, R.drawable.tooth_brushing_3, R.drawable.tooth_brushing_4, R.drawable.tooth_brushing_5,R.drawable.tooth_brushing_6,R.drawable.tooth_brushing_7,R.drawable.congratulations};
+                intent.putExtra("name", getString(R.string.tooth_brushing));
+                intent.putExtra("num_elements",8);
+                intent.putExtra("elements",pasos);
+                intent.putExtra("img_elements",imgPasos);
+                startActivity(intent);
+                break;
         }
     }
 

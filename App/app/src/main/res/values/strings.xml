@@ -11,26 +11,10 @@
     <string name="action_sign_in_short">Iniciar Sesión</string>
     <string name="error_invalid_email">El formato del Correo ingresado es inválido</string>
     <string name="error_invalid_password">La contraseña ingresada es muy corta. Debe contener al menos 8 caracteres.</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">Este campo es obligatorio</string>
     <string name="title_activity_maps">Lugares de Interés</string>
     <string name="title_activity_settings">Opciones</string>
 
-    <!-- Strings related to Settings -->
-
-    <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
-
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
 
     <!-- Sección Predeterminada -->
     <string name="default_section_title">Sección Predeterminada</string>
@@ -45,21 +29,12 @@
     </string-array>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notifications</string>
 
 
-    <string name="pref_title_new_message_notifications">New message notifications</string>
-
-    <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">Home</string>
     <string name="title_pictograms">Pictogramas</string>
     <string name="title_vocabulary">Vocabulario</string>
-    <string name="letslearn">Aprendamos</string>
-    <string name="action_settings">Opciones</string>
     <string name="signUp">Crear Cuenta</string>
     <string name="logout">Cerrar Sesión</string>
-    <string name="countries">Seleccionar País</string>
     <string name="pref_title_night_mode">Modo Noche</string>
     <string name="pref_description_Night_mode">Activa o Desactiva el Modo Noche</string>
     <string name="signUpQ">Crear Cuenta</string>
@@ -68,11 +43,7 @@
     <string name="deleteAccount">Eliminar Cuenta</string>
     <string name="prompt_password_confirmation">Confirmación de Contraseña</string>
     <string name="sign_up_form_title">Registrarse</string>
-    <string name="prompt_age">Edad (en años)</string>
-    <string name="prompt_name">Nombre</string>
     <string name="error">Error en la Operación</string>
-    <string name="title_help">Ayuda</string>
-    <string name="title_language">Idioma</string>
     <string name="send">Enviar</string>
     <string name="password_reset">Recuperación de Contraseña</string>
     <string name="login">Inicio de Sesión</string>
@@ -88,7 +59,6 @@
     <string name="pictograms_introduction_description">Aprende a realizar actividades diarias paso a paso guiado de manera visual y auditiva.</string>
     <string name="pictograms_introduction_title">Aprendizaje por Pictogramas</string>
 
-    <string name="title_activity_pictograms">PictogramsActivity</string>
     <string name="imageView_Introduction_Description">Introducción</string>
     <string name="nav_header_desc">Navigation header</string>
 
@@ -97,7 +67,6 @@
     <string name="profile">Perfil</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="success">Success!</string>
     <string name="ok" translatable="false">OK</string>
 
@@ -112,7 +81,6 @@
     <string name="delete_account_warning">¿Realmente desea eliminar su cuenta? Para completar esta operación debe proveer su contraseña.</string>
     <string name="delete">Eliminar</string>
     <string name="no">No</string>
-    <string name="habilities_learning">Aprendizaje de Habilidades</string>
     <string name="vocabulary_learning">Aprendizaje de Vocabulario</string>
     <string name="error_password_mismatch">Las contraseñas ingresadas nos coinciden</string>
     <string name="error_user_collision">Ya existe un usuario asociado a la dirección de correo electrónico ingresada. Intente con otra dirección de correo electrónico.</string>
@@ -133,7 +101,29 @@
         <item>¡Bien Hecho! ¡Tus manos ya están limpias!</item>
     </string-array>
 
-    <string name="congratularions">¡Bien Hecho!</string>
+    <string name="make_the_bed">Arreglar la Cama</string>
+    <string-array name="make_the_bed_steps">
+        <item>1. Ir a la Cama</item>
+        <item>2. Colocar la Sábana</item>
+        <item>3. Acomodar la Sábana</item>
+        <item>4. Colocar Manta</item>
+        <item>5. Acomodar Manta</item>
+        <item>6. Acomodar las Almohadas</item>
+        <item>¡Bien Hecho! ¡Tu cama ya está arreglada!</item>
+    </string-array>
+
+    <string name="tooth_brushing">Cepillarse los Dientes</string>
+    <string-array name="tooth_brushing_steps">
+        <item>1. Sacar la pasta de dientes</item>
+        <item>2. Colocar la pasta de dientes en el cepillo de dientes</item>
+        <item>3. Cepillar los Dientes</item>
+        <item>4. Llenar un vaso con agua</item>
+        <item>5. Tomar Agua</item>
+        <item>6. Hacer Gargaras</item>
+        <item>7. Escupir el agua</item>
+        <item>¡Bien Hecho! ¡Tus dientes ya están limpios!</item>
+    </string-array>
+
     <string name="habilities_list">Lista de Habilidades</string>
 
 
