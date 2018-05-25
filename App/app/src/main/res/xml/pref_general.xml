@@ -17,8 +17,7 @@
             android:entryValues="@array/section_list_values"
             android:icon="@drawable/ic_view_module_black_24dp"
             android:key="default_section"
-            android:negativeButtonText="@null"
-            android:positiveButtonText="@null"
+            android:defaultValue="pic"
             android:title="@string/default_section_title"
             android:summary="@string/default_section_description" />
 

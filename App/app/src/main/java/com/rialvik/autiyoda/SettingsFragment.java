@@ -1,6 +1,6 @@
 package com.rialvik.autiyoda;
 
-import android.app.AlertDialog;
+import android.support.v7.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseNetworkException;
@@ -32,7 +31,6 @@ public class SettingsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.pref_general);
         //Instanciación de Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-
 
         //setOnClickListener para las opciones de Logout y Eliminar cuenta.
         Preference prefLogout, prefDeleteAccount, prefNightMode;

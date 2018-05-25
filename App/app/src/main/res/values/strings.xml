@@ -59,7 +59,6 @@
     <string name="action_settings">Opciones</string>
     <string name="signUp">Crear Cuenta</string>
     <string name="logout">Cerrar Sesión</string>
-    <string name="gender">Género</string>
     <string name="countries">Seleccionar País</string>
     <string name="pref_title_night_mode">Modo Noche</string>
     <string name="pref_description_Night_mode">Activa o Desactiva el Modo Noche</string>

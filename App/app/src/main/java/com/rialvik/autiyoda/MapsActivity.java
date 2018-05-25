@@ -1,5 +1,7 @@
 package com.rialvik.autiyoda;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +28,16 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Verificamos el tema seleccionado por el usuario
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean tema = pref.getBoolean("nightMode_switch", false);
+        //Dependiendo del valor recuperado, se establece el tema para la activity.
+        if(tema) {
+            setTheme(R.style.DarkTheme);
+        }
+
         setContentView(R.layout.activity_maps);
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
